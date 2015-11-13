@@ -38,9 +38,14 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.13.3",
+    "errorhandler": "^1.4.2",
     "express": "^4.13.3",
+    "express-hbs": "^0.8.4",
     "express-session": "^1.11.3",
+    "method-override": "^2.3.5",
     "moment": "^2.10.6",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0",
     "string": "^3.3.1",
     "winston": "^1.0.1"
   }
