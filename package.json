@@ -1,0 +1,47 @@
+{
+  "name": "dynamite",
+  "version": "0.1.0",
+  "description": "Approach of a document management system of an employee engagement department",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "make test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://alejojamc@github.com/AlejoJamC/dynamite.git"
+  },
+  "keywords": [
+    "expressjs",
+    "nodejs",
+    "rackspace",
+    "cloudfiles",
+    "files",
+    "dms",
+    "firebase",
+    "parse.com"
+  ],
+  "author": "Alejandro Mantilla <@AlejoJamC>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/AlejoJamC/dynamite/issues"
+  },
+  "homepage": "https://github.com/AlejoJamC/dynamite#readme",
+  "devDependencies": {
+    "jshint": "^2.9.1-rc1",
+    "mocha": "^2.3.3",
+    "nodemon": "^1.8.1"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "1.13.3",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "moment": "^2.10.6",
+    "string": "^3.3.1",
+    "winston": "^1.0.1"
+  }
+}
