@@ -1,0 +1,16 @@
+{
+  "devLocal": {
+    "port": 3000,
+    "version": "/v0"
+  },
+
+  "devServer": {
+    "port": 3000,
+    "version": "/v0"
+  },
+
+  "production": {
+    "port": 3000,
+    "version": "/v1"
+  }
+}
