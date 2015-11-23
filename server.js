@@ -69,6 +69,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Current year.
 app.locals.currentYear = moment().year();
 
+// Setup all routes on express router
+routes.setupRouter(app);
+
 // Error handler available environment
 var env = process.env.NODE_ENV || environment;
 if ('devLocal' === env){
