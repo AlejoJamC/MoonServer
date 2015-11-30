@@ -1,5 +1,5 @@
 # Logs
-logs
+logs/
 *.log
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
@@ -20,9 +20,9 @@ thumbs.db
 # Premium Template Metronic
 # You can buy it on themeforest
 # http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469
-public/v4.1.0/
 public/css/
 public/img/
+public/media/
 public/plugins/
 public/scripts/
 public/favicon.ico
