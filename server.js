@@ -46,6 +46,7 @@ app.set('views', __dirname + '/views');
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // Logger.
+// TODO: Arreglar el error entre wiston y morgan
 //app.use(morgan('combined', { 'stream': logger.stream }));
 app.use(morgan('dev'));
 
