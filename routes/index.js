@@ -17,4 +17,14 @@ routerIndex.get('/', function (req, res) {
     });
 });
 
+
+/* GET Login page. */
+routerIndex.get('/login', function (req, res) {
+    res.render('Login', {
+        title: 'Iniciar sesión | Dynamite Docs',
+        level: ''
+    });
+});
+
+
 module.exports = routerIndex;
