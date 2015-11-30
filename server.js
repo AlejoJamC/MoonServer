@@ -46,7 +46,8 @@ app.set('views', __dirname + '/views');
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // Logger.
-app.use(morgan('combined', { 'stream': logger.stream }));
+//app.use(morgan('combined', { 'stream': logger.stream }));
+app.use(morgan('dev'));
 
 // Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
 app.use(methodOverride());
