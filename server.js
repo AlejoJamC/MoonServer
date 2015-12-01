@@ -65,6 +65,13 @@ app.use(session({
     secret: '3f1l 4 73g 0t d33n yll43r u s1ht d43r n4c u f1'
 }));
 
+// Set Header 'X-Prowered-By'
+logger.info('Dynamite Docs powered by: @AlejoJamC');
+app.use(function (req, res, next) {
+    res.set('X-Powered-By', 'Alejandro Mantilla < @AlejoJamC >');
+    next();
+});
+
 // Body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
