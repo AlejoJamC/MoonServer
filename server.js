@@ -9,6 +9,7 @@
 //
 // Module dependencies
 //
+// Choose the environment to work
 var express         = require('express'),
     bodyParser      = require('body-parser'),
     errorHandler    = require('errorhandler'),
@@ -20,12 +21,16 @@ var express         = require('express'),
     path            = require('path'),
     session         = require('express-session'),
 
+    stormpath       = require('express-stormpath'),
+
     logger          = require('./config/logger').logger,
     routes          = require('./routes/routes'),
 
     environment     = 'devLocal',
     config          = require('./config/environment.json')[environment],
     port            = config.port;
+
+logger.info('Enviroment: ' + environment);
 
 // Express app instance
 var app = express();
@@ -67,6 +72,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Import static files.
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Stormpath initialization
+app.use(stormpath.init(app, {
+    client:{
+        apiKey: {
+            file: config.auth.ApiKeyFile
+        }
+    },
+    application:{
+        href: config.auth.HREF
+    },
+    website: true,
+    expand: {
+        customData: true
+    }
+}));
+
 // Local variables.
 // Current year.
 app.locals.currentYear = moment().year();
@@ -80,7 +101,10 @@ if ('devLocal' === env){
     app.use(errorHandler());
 }
 
-// Binds and listens for connections on the specified host and port.
-app.listen(app.get('port'), function(){
-    logger.info('Dynamite website listening on port ' + port);
+// Once stormpath is ready starts the web server
+app.on('stormpath.ready', function () {
+    // Binds and listens for connections on the specified host and port.
+    app.listen(app.get('port'), function(){
+        logger.info('Dynamite website id running on http://localhost:' + port + '/');
+    });
 });
