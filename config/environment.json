@@ -3,9 +3,8 @@
     "port": 3000,
     "version": "/v0",
     "auth":{
-      "HREF" : "",
-      "APIKeyId" : "",
-      "APISecret" : ""
+      "HREF" : "https://api.stormpath.com/v1/applications/abc123xyz098",
+      "ApiKeyFile" : "./config/ApiKey.properties"
     }
   },
 
@@ -14,8 +13,7 @@
     "version": "/v0",
     "auth":{
       "HREF" : "",
-      "APIKeyId" : "",
-      "APISecret" : ""
+      "ApiKeyFile" : ""
     }
   },
 
@@ -24,8 +22,7 @@
     "version": "/v1",
     "auth":{
       "HREF" : "",
-      "APIKeyId" : "",
-      "APISecret" : ""
+      "ApiKeyFile" : ""
     }
   }
 }
