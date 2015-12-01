@@ -1,16 +1,31 @@
 {
   "devLocal": {
     "port": 3000,
-    "version": "/v0"
+    "version": "/v0",
+    "auth":{
+      "HREF" : "",
+      "APIKeyId" : "",
+      "APISecret" : ""
+    }
   },
 
   "devServer": {
     "port": 3000,
-    "version": "/v0"
+    "version": "/v0",
+    "auth":{
+      "HREF" : "",
+      "APIKeyId" : "",
+      "APISecret" : ""
+    }
   },
 
   "production": {
     "port": 3000,
-    "version": "/v1"
+    "version": "/v1",
+    "auth":{
+      "HREF" : "",
+      "APIKeyId" : "",
+      "APISecret" : ""
+    }
   }
 }
