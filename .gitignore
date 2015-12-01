@@ -27,3 +27,7 @@ public/plugins/
 public/scripts/
 public/favicon.ico
 *.html
+
+# Configuration folder
+# Origiginal values
+config/env_jamc.json
