@@ -30,4 +30,5 @@ public/favicon.ico
 
 # Configuration folder
 # Origiginal values
-config/env_jamc.json
+config/AuthApiKeyDynamite.properties
+config/envJamC.json
