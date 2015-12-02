@@ -7,8 +7,8 @@
  */
 
 // Load required packages
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var mongoose    = require('mongoose');
+var Schema      = mongoose.Schema;
 
 // Define Type of Novelty schema
 var TypeNoveltySchema = new Schema({
