@@ -9,7 +9,6 @@
 //
 // Module dependencies
 //
-// Choose the environment to work
 var express         = require('express'),
     bodyParser      = require('body-parser'),
     errorHandler    = require('errorhandler'),
@@ -17,13 +16,14 @@ var express         = require('express'),
     hbs             = require('express-hbs'),
     methodOverride  = require('method-override'),
     moment          = require('moment'),
-    morgan          = require('morgan'),
     path            = require('path'),
     session         = require('express-session'),
 
     stormpath       = require('express-stormpath'),
 
     logger          = require('./config/logger').logger,
+    morgan          = require('morgan'),
+
     routes          = require('./routes/routes'),
 
     environment     = 'devLocal',
@@ -74,7 +74,9 @@ app.use(function (req, res, next) {
 
 // Body parser
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 // Import static files.
 app.use(express.static(path.join(__dirname, 'public')));
@@ -112,6 +114,6 @@ if ('devLocal' === env){
 app.on('stormpath.ready', function () {
     // Binds and listens for connections on the specified host and port.
     app.listen(app.get('port'), function(){
-        logger.info('Dynamite website id running on http://localhost:' + port + '/');
+        logger.info('Dynamite is running on http://localhost:' + port + '/');
     });
 });
