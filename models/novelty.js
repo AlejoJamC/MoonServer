@@ -10,14 +10,14 @@
 var mongoose        = require('mongoose');
 var Schema          = mongoose.Schema;
 
-var TypeNovelty     = require('./typeNovelty').TypeNovelty;
+var NoveltyType     = require('./noveltyType').NoveltyType;
 var Employee        = require('./employee').Employee;
 var Contract        = require('./contract').Contract;
-var StateNovelty    = require('./stateNovelty').StateNovelty;
+var NoveltyState    = require('./noveltyState').NoveltyState;
 
 // Define Employee schema
 var NoveltySchema = new Schema({
-    type:               [TypeNovelty.schema],
+    type:               [NoveltyType.schema],
     employee:           [Employee.schema],
     contract:           [Contract.schema],
     initialDate:        Date,
@@ -26,7 +26,7 @@ var NoveltySchema = new Schema({
     detail:             String,
     observation:        String,
     attachedFile:       String,
-    state:              [StateNovelty.schema],
+    state:              [NoveltyState.schema],
     creationDate:       Date,
     lastEditionDate:    Date,
     enabled:            Boolean

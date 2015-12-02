@@ -10,8 +10,8 @@
 var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
-// Define State of Novelty schema
-var StateNoveltySchema = new Schema({
+// Define Type of Novelty schema
+var NoveltyTypeSchema = new Schema({
     name:               String,
     creationDate:       Date,
     lastEditionDate:    Date,
@@ -19,4 +19,4 @@ var StateNoveltySchema = new Schema({
 });
 
 // Export the mongoose model
-module.exports.StateNovelty = mongoose.model('StateNovelty', StateNoveltySchema);
+module.exports.NoveltyType = mongoose.model('NoveltyType', NoveltyTypeSchema);

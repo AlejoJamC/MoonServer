@@ -10,8 +10,8 @@
 var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
-// Define Type of Novelty schema
-var TypeNoveltySchema = new Schema({
+// Define Termination of  Contract Type schema
+var TerminationContractTypeSchema = new Schema({
     name:               String,
     creationDate:       Date,
     lastEditionDate:    Date,
@@ -19,4 +19,4 @@ var TypeNoveltySchema = new Schema({
 });
 
 // Export the mongoose model
-module.exports.TypeNovelty = mongoose.model('TypeNovelty', TypeNoveltySchema);
+module.exports.TerminationContractType = mongoose.model('TerminationContractType', TerminationContractTypeSchema);
