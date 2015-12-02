@@ -10,16 +10,16 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var BranchOffice = require('./branchOffice').BranchOffice;
+var Department = require('./department').Department;
 
-// Define Department schema
-var DepartmentSchema = new Schema({
+// Define Jobs schema
+var JobSchema = new Schema({
     name:               String,
-    branchOffice:       [BranchOffice.schema],
+    department:         [Department.schema],
     creationDate:       Date,
     lastEditionDate:    Date,
     enabled:            Boolean
 });
 
 // Export the mongoose model
-module.exports.Department = mongoose.model('Department', DepartmentSchema);
+module.exports.Job = mongoose.model('Job', JobSchema);
