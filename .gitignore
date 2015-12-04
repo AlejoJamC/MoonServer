@@ -22,10 +22,18 @@ thumbs.db
 # http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469
 public/css/
 public/img/
+public/landing/
+public/landing/css/
+public/landing/fonts/
+public/landing/img/
+public/landing/js/
+public/landing/video/
 public/media/
 public/plugins/
 public/scripts/
 public/favicon.ico
+
+
 *.html
 
 # Configuration folder
