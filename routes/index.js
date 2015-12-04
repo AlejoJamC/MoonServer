@@ -7,24 +7,39 @@
  */
 
 var express = require('express');
-var routerIndex = express.Router();
+var indexRouter = express.Router();
+var passport = require('passport');
 
 /* GET home page. */
-routerIndex.get('/', function (req, res) {
+indexRouter.get('/', function (req, res) {
     res.render('index', {
         title: 'Dynamite Docs | Administracion y almacenamiento inteligente.',
-        level: ''
+        level: 'landing/'
     });
 });
 
 
 /* GET Login page. */
-routerIndex.get('/login', function (req, res) {
-    res.render('Login', {
+indexRouter.get('/login', function (req, res) {
+    res.render('login', {
         title: 'Iniciar sesión | Dynamite Docs',
         level: ''
     });
 });
 
+/* POST Login page. */
+indexRouter.post('/login', passport.authenticate('stormpath',{
+    successRedirect: '/dashboard',
+    failureRedirect: '/login',
+    failureFlash: 'Email o contraseña invalida.'
+}));
 
-module.exports = routerIndex;
+
+/* GET Logout page. */
+indexRouter.get('/logout', function (req, res) {
+    req.logout();
+    res.redirect('/');
+});
+
+
+module.exports = indexRouter;
