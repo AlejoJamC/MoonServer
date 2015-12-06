@@ -16,10 +16,12 @@
 function setupRouter (app){
     // Initialize all routes
     var indexRoutes = require('./index');
+    var brachOfficeRoutes = require('./branchOffice');
 
     // Assigned routes
     // Index
     app.use('/', indexRoutes);
+    app.use('/', brachOfficeRoutes);
 }
 // Export setup function
 module.exports.setupRouter = setupRouter;
