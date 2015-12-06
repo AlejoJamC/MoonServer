@@ -12,9 +12,11 @@ var branchOfficeRouter = express.Router();
 
 /* GET Branch Office page. */
 branchOfficeRouter.get('/branch/office', function (req, res) {
-    res.render('branchOffice', {
+    res.render('dashboard', {
         title: 'Registro | Dynamite Docs',
-        level: '',
+        level: '../../',
         error: ''
     });
 });
+
+module.exports = branchOfficeRouter;
