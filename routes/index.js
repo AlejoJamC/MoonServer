@@ -27,7 +27,10 @@ indexRouter.get('/princing', function (req, res) {
 
 /* GET Contact page. */
 indexRouter.get('/contact', function (req, res) {
-    res.redirect('/');
+    res.render('contact', {
+        title: 'Contacto | Dynamite Docs',
+        level: 'landing/'
+    });
 });
 
 /* ---------- END MAIN MENU ---------- */
