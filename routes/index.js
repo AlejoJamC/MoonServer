@@ -10,6 +10,8 @@ var express = require('express');
 var indexRouter = express.Router();
 var passport = require('passport');
 
+/* ---------- MAIN MENU ---------- */
+
 /* GET home page. */
 indexRouter.get('/', function (req, res) {
     res.render('index', {
@@ -18,6 +20,38 @@ indexRouter.get('/', function (req, res) {
     });
 });
 
+/* GET Pricing page. */
+indexRouter.get('/princing', function (req, res) {
+    res.redirect('/');
+});
+
+/* GET Contact page. */
+indexRouter.get('/contact', function (req, res) {
+    res.redirect('/');
+});
+
+/* ---------- END MAIN MENU ---------- */
+
+/* ---------- FOOTER MENU ---------- */
+
+/* GET Help page. */
+indexRouter.get('/help', function (req, res) {
+    res.redirect('/');
+});
+
+/* GET Privacy page. */
+indexRouter.get('/privacy', function (req, res) {
+    res.redirect('/');
+});
+
+/* GET Terms page. */
+indexRouter.get('/terms', function (req, res) {
+    res.redirect('/');
+});
+
+/* ---------- END FOOTER MENU ---------- */
+
+/* ---------- CROSS-PLATFORM ---------- */
 
 /* GET Login page. */
 indexRouter.get('/login', function (req, res) {
@@ -34,12 +68,17 @@ indexRouter.post('/login', passport.authenticate('stormpath',{
     failureFlash: 'Email o contraseña invalida.'
 }));
 
-
 /* GET Logout page. */
 indexRouter.get('/logout', function (req, res) {
     req.logout();
     res.redirect('/');
 });
 
+/* GET Reset Password page. */
+indexRouter.get('/password/reset', function (req, res) {
+    res.redirect('/');
+});
+
+/* ---------- END CROSS-PLATFORM ---------- */
 
 module.exports = indexRouter;
