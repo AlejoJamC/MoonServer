@@ -28,8 +28,12 @@
             </ul>
         </li>
         <li>
+            {{#if isHome}}
             <a href="/#pricing">
-                Precio
+            {{else}}
+            <a href="/pricing">
+            {{/if}}
+            Precio
             </a>
         </li>
         <li>

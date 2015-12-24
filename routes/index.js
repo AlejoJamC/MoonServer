@@ -16,12 +16,13 @@ var passport = require('passport');
 indexRouter.get('/', function (req, res) {
     res.render('index', {
         title: 'Dynamite Docs | Administracion y almacenamiento inteligente.',
-        level: 'landing/'
+        level: 'landing/',
+        isHome: true
     });
 });
 
 /* GET Pricing page. */
-indexRouter.get('/princing', function (req, res) {
+indexRouter.get('/pricing', function (req, res) {
     res.render('pricing', {
         title: 'Precios | Dynamite Docs',
         level: 'landing/'
