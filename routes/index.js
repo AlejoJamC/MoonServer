@@ -22,7 +22,10 @@ indexRouter.get('/', function (req, res) {
 
 /* GET Pricing page. */
 indexRouter.get('/princing', function (req, res) {
-    res.redirect('/');
+    res.render('pricing', {
+        title: 'Precios | Dynamite Docs',
+        level: 'landing/'
+    });
 });
 
 /* GET Contact page. */
