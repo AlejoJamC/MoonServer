@@ -1,17 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>{{title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
-    <link href="{{level}}css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{level}}css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{level}}css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{level}}css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{level}}css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{level}}css/theme-fire.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{level}}css/custom.css" rel="stylesheet" type="text/css" media="all" />
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    {{> landing/head}}
 </head>
 <body>
 <div class="nav-container">
@@ -28,43 +18,8 @@
                 <i class="ti-menu"></i>
             </div>
             <div class="module-group right">
-                <div class="module left">
-                    <ul class="menu">
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Pages
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Elements
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Shop
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--end of menu module-->
+                {{> landing/navigation}}
             </div>
-            <!--end of module group-->
         </div>
     </nav>
 </div>
@@ -369,109 +324,9 @@
     </section>
     <!-- END SECTION 7 - REGISTER -->
     <!-- FOOTER -->
-    <footer class="footer-1 bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <img alt="Logo" class="logo" src="{{level}}img/logo-light.png" />
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h6 class="title">Recent Posts</h6>
-                        <hr>
-                        <ul class="link-list recent-posts">
-                            <li>
-                                <a href="#">Hugging pugs is super trendy</a>
-                                        <span class="date">February
-                                            <span class="number">14, 2015</span>
-                                        </span>
-                            </li>
-                            <li>
-                                <a href="#">Spinning vinyl is oh so cool</a>
-                                        <span class="date">February
-                                            <span class="number">9, 2015</span>
-                                        </span>
-                            </li>
-                            <li>
-                                <a href="#">Superior theme design by pros</a>
-                                        <span class="date">January
-                                            <span class="number">27, 2015</span>
-                                        </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--end of widget-->
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h6 class="title">Latest Updates</h6>
-                        <hr>
-                        <div class="twitter-feed">
-                            <div class="tweets-feed" data-widget-id="492085717044981760">
-                            </div>
-                        </div>
-                    </div>
-                    <!--end of widget-->
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h6 class="title">Instagram</h6>
-                        <hr>
-                        <div class="instafeed" data-user-name="funsizeco">
-                            <ul></ul>
-                        </div>
-                    </div>
-                    <!--end of widget-->
-                </div>
-            </div>
-            <!--end of row-->
-            <div class="row">
-                <div class="col-sm-6">
-                    <span class="sub">&copy; Copyright 2015 - Medium Rare</span>
-                </div>
-                <div class="col-sm-6 text-right">
-                    <ul class="list-inline social-list">
-                        <li>
-                            <a href="#">
-                                <i class="ti-twitter-alt"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ti-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ti-dribbble"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ti-vimeo-alt"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--end of container-->
-        <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
-    </footer>
+    {{> landing/footer}}
     <!-- END FOOTER -->
 </div>
-<script src="{{level}}js/jquery.min.js"></script>
-<script src="{{level}}js/bootstrap.min.js"></script>
-<script src="{{level}}js/flickr.js"></script>
-<script src="{{level}}js/flexslider.min.js"></script>
-<script src="{{level}}js/lightbox.min.js"></script>
-<script src="{{level}}js/masonry.min.js"></script>
-<script src="{{level}}js/twitterfetcher.min.js"></script>
-<script src="{{level}}js/spectragram.min.js"></script>
-<script src="{{level}}js/ytplayer.min.js"></script>
-<script src="{{level}}js/countdown.min.js"></script>
-<script src="{{level}}js/smooth-scroll.min.js"></script>
-<script src="{{level}}js/parallax.js"></script>
-<script src="{{level}}js/scripts.js"></script>
+{{> landing/scripts}}
 </body>
 </html>
