@@ -19,15 +19,13 @@ var express         = require('express'),
     path            = require('path'),
     session         = require('express-session'),
 
-    stormpath       = require('express-stormpath'),
-
     logger          = require('./config/logger').logger,
     morgan          = require('morgan'),
 
     routes          = require('./routes/routes'),
 
     environment     = 'devLocal',
-    config          = require('./config/environment.json')[environment],
+    config          = require('./config/envJamC.json')[environment],
     port            = config.port;
 
 logger.info('Enviroment: ' + environment);
@@ -82,24 +80,25 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Stormpath initialization
-app.use(stormpath.init(app, {
-    client:{
-        apiKey: {
-            file: config.auth.ApiKeyFile
-        }
-    },
-    application:{
-        href: config.auth.HREF
-    },
-    website: true,
-    expand: {
-        customData: true
-    }
-}));
+//app.use(stormpath.init(app, {
+//    client:{
+//        apiKey: {
+//            file: config.auth.ApiKeyFile
+//        }
+//    },
+//    application:{
+//        href: config.auth.HREF
+//    },
+//    website: true,
+//    expand: {
+//        customData: true
+//    }
+//}));
 
 // Local variables.
 // Current year.
 app.locals.currentYear = moment().year();
+app.locals.currentEnvironment = environment;
 
 // Setup all routes on express router
 routes.setupRouter(app);
@@ -111,9 +110,13 @@ if ('devLocal' === env){
 }
 
 // Once stormpath is ready starts the web server
-app.on('stormpath.ready', function () {
-    // Binds and listens for connections on the specified host and port.
-    app.listen(app.get('port'), function(){
-        logger.info('Dynamite is running on http://localhost:' + port + '/');
-    });
+//app.on('stormpath.ready', function () {
+//    logger.info('Stormpath client initialized successfully!');
+//    // Binds and listens for connections on the specified host and port.
+//    app.listen(app.get('port'), function(){
+//        logger.info('Dynamite is running on http://localhost:' + port + '/');
+//    });
+//});
+app.listen(app.get('port'), function(){
+    logger.info('Dynamite is running on http://localhost:' + port + '/');
 });
