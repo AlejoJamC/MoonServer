@@ -1,109 +1,62 @@
-<!doctype html>
-<html lang="en">
-<head>
-    {{> landing/head}}
-</head>
-<body>
-<div class="nav-container">
-    <a id="top"></a>
-    <nav>
-        <div class="nav-utility">
-            <div class="module left">
-                <i class="ti-location-arrow">&nbsp;</i>
-                <span class="sub">68 Cardamon Place, Melbourne Vic 3000</span>
+<section class="page-title page-title-4 bg-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="uppercase mb0">Contact Us</h3>
             </div>
-            <div class="module left">
-                <i class="ti-email">&nbsp;</i>
-                <span class="sub">hello@foundry.net</span>
-            </div>
-            <div class="module right">
-                <a class="btn btn-sm hidden-xs hidden-sm hidden-md" href="/">Try Builder</a>
-                <a class="btn btn-sm btn-filled" href="/pricing">Buy Now</a>
+            <div class="col-md-6 text-right">
+                <ol class="breadcrumb breadcrumb-2">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Pages</a>
+                    </li>
+                    <li class="active">Contact</li>
+                </ol>
             </div>
         </div>
-        <div class="nav-bar">
-            <div class="module left">
-                <a href="/">
-                    <img class="logo logo-light" alt="Foundry" src="{{level}}img/logo-light.png" />
-                    <img class="logo logo-dark" alt="Foundry" src="{{level}}img/logo-dark.png" />
-                </a>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<section class="p0">
+    <div class="map-holder pt160 pb160">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1979.535378894242!2d-73.11336553115459!3d7.117798998886884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDcnMDQuMSJOIDczwrAwNic0NC41Ilc!5e0!3m2!1ses!2sco!4v1450935064937"></iframe>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-5">
+                <h4 class="uppercase">Get In Touch</h4>
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                </p>
+                <hr>
+                <p>
+                    438 Marine Parade
+                    <br /> Elwood, Victoria
+                    <br /> P.O Box 3184
+                </p>
+                <hr>
+                <p>
+                    <strong>E:</strong> hello@foundry.net
+                    <br />
+                    <strong>P:</strong> +614 3948 2726
+                    <br />
+                </p>
             </div>
-            <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-                <i class="ti-menu"></i>
-            </div>
-            <div class="module-group right">
-                {{> landing/navigation}}
+            <div class="col-sm-6 col-md-5 col-md-offset-1">
+                <form class="form-email" data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly.">
+                    <input type="text" class="validate-required" name="name" placeholder="Your Name" />
+                    <input type="text" class="validate-required validate-email" name="email" placeholder="Email Address" />
+                    <textarea class="validate-required" name="message" rows="4" placeholder="Message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </div>
-    </nav>
-</div>
-<div class="main-container">
-    <section class="page-title page-title-4 bg-secondary">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 class="uppercase mb0">Contact Us</h3>
-                </div>
-                <div class="col-md-6 text-right">
-                    <ol class="breadcrumb breadcrumb-2">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Pages</a>
-                        </li>
-                        <li class="active">Contact</li>
-                    </ol>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </section>
-    <section class="p0">
-        <div class="map-holder pt160 pb160">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1979.535378894242!2d-73.11336553115459!3d7.117798998886884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDcnMDQuMSJOIDczwrAwNic0NC41Ilc!5e0!3m2!1ses!2sco!4v1450935064937"></iframe>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-5">
-                    <h4 class="uppercase">Get In Touch</h4>
-                    <p>
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    </p>
-                    <hr>
-                    <p>
-                        438 Marine Parade
-                        <br /> Elwood, Victoria
-                        <br /> P.O Box 3184
-                    </p>
-                    <hr>
-                    <p>
-                        <strong>E:</strong> hello@foundry.net
-                        <br />
-                        <strong>P:</strong> +614 3948 2726
-                        <br />
-                    </p>
-                </div>
-                <div class="col-sm-6 col-md-5 col-md-offset-1">
-                    <form class="form-email" data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly.">
-                        <input type="text" class="validate-required" name="name" placeholder="Your Name" />
-                        <input type="text" class="validate-required validate-email" name="email" placeholder="Email Address" />
-                        <textarea class="validate-required" name="message" rows="4" placeholder="Message"></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </section>
-    <!-- FOOTER -->
-    {{> landing/footer}}
-    <!-- END FOOTER -->
-</div>
-{{> landing/scripts}}
-</body>
-</html>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
