@@ -14,26 +14,29 @@ var passport = require('passport');
 
 /* GET home page. */
 indexRouter.get('/', function (req, res) {
-    res.render('index', {
+    res.render('landing/index', {
         title: 'Dynamite Docs | Administracion y almacenamiento inteligente.',
         level: 'landing/',
+        layout: 'landing/struct',
         isHome: true
     });
 });
 
 /* GET Pricing page. */
 indexRouter.get('/pricing', function (req, res) {
-    res.render('pricing', {
+    res.render('landing/pricing', {
         title: 'Precios | Dynamite Docs',
-        level: 'landing/'
+        level: 'landing/',
+        layout: 'landing/struct'
     });
 });
 
 /* GET Contact page. */
 indexRouter.get('/contact', function (req, res) {
-    res.render('contact', {
+    res.render('landing/contact', {
         title: 'Contacto | Dynamite Docs',
-        level: 'landing/'
+        level: 'landing/',
+        layout: 'landing/struct'
     });
 });
 
@@ -43,17 +46,38 @@ indexRouter.get('/contact', function (req, res) {
 
 /* GET Help page. */
 indexRouter.get('/help', function (req, res) {
-    res.redirect('/');
+    res.render('landing/help', {
+        title: 'Ayuda | Dynamite Docs',
+        level: 'landing/',
+        layout: 'landing/struct'
+    });
 });
 
 /* GET Privacy page. */
 indexRouter.get('/privacy', function (req, res) {
-    res.redirect('/');
+    res.render('landing/privacy', {
+        title: 'Privacidad | Dynamite Docs',
+        level: 'landing/',
+        layout: 'landing/struct'
+    });
+});
+
+/* GET Sitemap page. */
+indexRouter.get('/sitemap', function (req, res) {
+    res.render('landing/sitemap', {
+        title: 'Mapa del sitio | Dynamite Docs',
+        level: 'landing/',
+        layout: 'landing/struct'
+    });
 });
 
 /* GET Terms page. */
 indexRouter.get('/terms', function (req, res) {
-    res.redirect('/');
+    res.render('landing/terms', {
+        title: 'Terminos y condiciones | Dynamite Docs',
+        level: 'landing/',
+        layout: 'landing/struct'
+    });
 });
 
 /* ---------- END FOOTER MENU ---------- */
