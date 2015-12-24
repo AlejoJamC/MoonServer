@@ -1,332 +1,299 @@
-<!doctype html>
-<html lang="en">
-<head>
-    {{> landing/head}}
-</head>
-<body>
-<div class="nav-container">
-    <a id="top"></a>
-    <nav class="absolute transparent">
-        <div class="nav-bar">
-            <div class="module left">
-                <a href="/">
-                    <img class="logo logo-light" alt="Foundry" src="{{level}}img/logo-light.png" />
-                    <img class="logo logo-dark" alt="Foundry" src="{{level}}img/logo-dark.png" />
-                </a>
-            </div>
-            <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-                <i class="ti-menu"></i>
-            </div>
-            <div class="module-group right">
-                {{> landing/navigation}}
-            </div>
-        </div>
-    </nav>
-</div>
-<div class="main-container">
-    <!-- SECTION 1 - HOME -->
-    <section class="bg-primary pb0" id="home">
-        <div class="container pt80">
-            <div class="row mb24 mb-xs-0">
-                <div class="col-sm-10 col-sm-offset-1 text-center">
-                    <h1 class="large">Present your app, easily.</h1>
-                    <p class="lead">
-                        The perfect layout for presenting landing pages for apps
-                        <br /> or software in contemporary style.
-                    </p>
-                </div>
-            </div>
-            <!--end of row-->
-            <div class="row mb80 mb-xs-24">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <form class="form-newsletter halves" data-success="Thanks for your registration, we will be in touch shortly." data-error="Please fill all fields correctly.">
-                        <input type="text" name="email" class="transparent validate-email validate-required  signup-email-field" placeholder="Email Address" />
-                        <button type="submit" class="btn-white">Start Free</button>
-                        <iframe srcdoc="<form action=&quot;http://mrareco.createsend.com/t/d/s/dyikkh/&quot; method=&quot;post&quot; id=&quot;subForm&quot;>     <p>         <label for=&quot;fieldName&quot;>Name</label><br />         <input id=&quot;fieldName&quot; name=&quot;cm-name&quot; type=&quot;text&quot; />     </p>     <p>         <label for=&quot;fieldEmail&quot;>Email</label><br />         <input id=&quot;fieldEmail&quot; name=&quot;cm-dyikkh-dyikkh&quot; type=&quot;email&quot; required />     </p>     <p>         <button type=&quot;submit&quot;>Subscribe</button>     </p> </form>" class="mail-list-form">
-                        </iframe>
-                    </form>
-                </div>
-            </div>
-            <!--end of row-->
-            <div class="row">
-                <img alt="image" src="{{level}}img/app1.png" />
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </section>
-    <!-- END SECTION 1 - HOME -->
-    <!-- SECTION 2 - FEATURES -->
-    <section class="bg-dark pt120 pb120 pt-xs-40 pb-xs-40" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-4 col-md-offset-2">
-                    <div class="feature feature-3 mb64 mb-xs-24">
-                        <div class="left">
-                            <i class="ti-signal icon-sm"></i>
-                        </div>
-                        <div class="right">
-                            <h4 class="mb16">Stay Organized</h4>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
-                            </p>
-                        </div>
-                    </div>
-                    <!--end of feature-->
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="feature feature-3 mb64 mb-xs-24">
-                        <div class="left">
-                            <i class="ti-ruler-alt icon-sm"></i>
-                        </div>
-                        <div class="right">
-                            <h4 class="mb16">Get Creative</h4>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
-                            </p>
-                        </div>
-                    </div>
-                    <!--end of feature-->
-                </div>
-                <div class="col-sm-6 col-md-4 col-md-offset-2">
-                    <div class="feature feature-3 mb-xs-24">
-                        <div class="left">
-                            <i class="ti-layers icon-sm"></i>
-                        </div>
-                        <div class="right">
-                            <h4 class="mb16">Silky Parallax</h4>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
-                            </p>
-                        </div>
-                    </div>
-                    <!--end of feature-->
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="feature feature-3">
-                        <div class="left">
-                            <i class="ti-heart icon-sm"></i>
-                        </div>
-                        <div class="right">
-                            <h4 class="mb16">Elite Author Item</h4>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
-                            </p>
-                        </div>
-                    </div>
-                    <!--end of feature-->
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </section>
-    <!-- END SECTION 2 - FEATURES -->
-    <!-- SECTION 3 - SUPER-FEATURE 1 -->
-    <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40" id="notifications">
-        <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8">
-            <img alt="Screenshot" class="cast-shadow mb-xs-24" src="{{level}}img/app3.jpg" />
-        </div>
-        <div class="container">
-            <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
-                <h3 class="mb40 mb-xs-16">Use the pre-built text and image variations to spruik cool features.</h3>
-                <p class="lead mb40">
-                    We've built three distinct image and text combinations for you to showcase the features of your product or service.
+<!-- SECTION 1 - HOME -->
+<section class="bg-primary pb0" id="home">
+    <div class="container pt80">
+        <div class="row mb24 mb-xs-0">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+                <h1 class="large">Present your app, easily.</h1>
+                <p class="lead">
+                    The perfect layout for presenting landing pages for apps
+                    <br /> or software in contemporary style.
                 </p>
-                <div class="feature boxed">
+            </div>
+        </div>
+        <!--end of row-->
+        <div class="row mb80 mb-xs-24">
+            <div class="col-sm-6 col-sm-offset-3">
+                <form class="form-newsletter halves" data-success="Thanks for your registration, we will be in touch shortly." data-error="Please fill all fields correctly.">
+                    <input type="text" name="email" class="transparent validate-email validate-required  signup-email-field" placeholder="Email Address" />
+                    <button type="submit" class="btn-white">Start Free</button>
+                    <iframe srcdoc="<form action=&quot;http://mrareco.createsend.com/t/d/s/dyikkh/&quot; method=&quot;post&quot; id=&quot;subForm&quot;>     <p>         <label for=&quot;fieldName&quot;>Name</label><br />         <input id=&quot;fieldName&quot; name=&quot;cm-name&quot; type=&quot;text&quot; />     </p>     <p>         <label for=&quot;fieldEmail&quot;>Email</label><br />         <input id=&quot;fieldEmail&quot; name=&quot;cm-dyikkh-dyikkh&quot; type=&quot;email&quot; required />     </p>     <p>         <button type=&quot;submit&quot;>Subscribe</button>     </p> </form>" class="mail-list-form">
+                    </iframe>
+                </form>
+            </div>
+        </div>
+        <!--end of row-->
+        <div class="row">
+            <img alt="image" src="{{level}}img/app1.png" />
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<!-- END SECTION 1 - HOME -->
+<!-- SECTION 2 - FEATURES -->
+<section class="bg-dark pt120 pb120 pt-xs-40 pb-xs-40" id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-2">
+                <div class="feature feature-3 mb64 mb-xs-24">
+                    <div class="left">
+                        <i class="ti-signal icon-sm"></i>
+                    </div>
+                    <div class="right">
+                        <h4 class="mb16">Stay Organized</h4>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                        </p>
+                    </div>
+                </div>
+                <!--end of feature-->
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="feature feature-3 mb64 mb-xs-24">
+                    <div class="left">
+                        <i class="ti-ruler-alt icon-sm"></i>
+                    </div>
+                    <div class="right">
+                        <h4 class="mb16">Get Creative</h4>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                        </p>
+                    </div>
+                </div>
+                <!--end of feature-->
+            </div>
+            <div class="col-sm-6 col-md-4 col-md-offset-2">
+                <div class="feature feature-3 mb-xs-24">
+                    <div class="left">
+                        <i class="ti-layers icon-sm"></i>
+                    </div>
+                    <div class="right">
+                        <h4 class="mb16">Silky Parallax</h4>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                        </p>
+                    </div>
+                </div>
+                <!--end of feature-->
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="feature feature-3">
+                    <div class="left">
+                        <i class="ti-heart icon-sm"></i>
+                    </div>
+                    <div class="right">
+                        <h4 class="mb16">Elite Author Item</h4>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                        </p>
+                    </div>
+                </div>
+                <!--end of feature-->
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<!-- END SECTION 2 - FEATURES -->
+<!-- SECTION 3 - SUPER-FEATURE 1 -->
+<section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40" id="notifications">
+    <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8">
+        <img alt="Screenshot" class="cast-shadow mb-xs-24" src="{{level}}img/app3.jpg" />
+    </div>
+    <div class="container">
+        <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
+            <h3 class="mb40 mb-xs-16">Use the pre-built text and image variations to spruik cool features.</h3>
+            <p class="lead mb40">
+                We've built three distinct image and text combinations for you to showcase the features of your product or service.
+            </p>
+            <div class="feature boxed">
+                <p>
+                    "What a sick app this is - I've been searching forever for something like this to come along - WOW"
+                </p>
+                <div class="spread-children">
+                    <img alt="Pic" class="image-xs" src="{{level}}img/avatar1.png" />
+                    <span>Anne Bracken - Themeforest</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end of container-->
+</section>
+<!-- END SECTION 3 - SUPER-FEATURE 1 -->
+<!-- SECTION 4 - SUPER-FEATURE 2 -->
+<section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40" id="docs">
+    <div class="col-md-6 col-sm-4 p0">
+        <img alt="Screenshot" class="mb-xs-24" src="{{level}}img/app4.jpg" />
+    </div>
+    <div class="container">
+        <div class="col-md-5 col-md-offset-1 col-sm-7 col-sm-offset-1 v-align-transform right">
+            <h3 class="mb40 mb-xs-16">Combine different blocks together to form your perfect layout.</h3>
+            <p class="lead mb40">
+                We've built three distinct image and text combinations for you to showcase the features of your product or service.
+            </p>
+            <div class="feature feature-3">
+                <div class="left">
+                    <i class="ti-user icon-sm"></i>
+                </div>
+                <div class="right">
+                    <h4 class="mb16">Built for you</h4>
+                </div>
+            </div>
+            <!--end of feature-->
+            <div class="feature feature-3">
+                <div class="left">
+                    <i class="ti-package icon-sm"></i>
+                </div>
+                <div class="right">
+                    <h4 class="mb16">Incredible Value</h4>
+                </div>
+            </div>
+            <!--end of feature-->
+        </div>
+    </div>
+    <!--end of container-->
+</section>
+<!-- END SECTION 4 - SUPER-FEATURE 2 -->
+<!-- SECTION 5 - PRICING -->
+<section id="pricing">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1 class="thin mb80 mb-xs-24">Pricing? That's easy.</h1>
+            </div>
+        </div>
+        <!--end of row-->
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-md-offset-2">
+                <div class="pricing-table pt-1 text-center">
+                    <H5 class="uppercase">One User</H5>
+                    <span class="price">$12</span>
+                    <p class="lead">Per Month</p>
+                    <a class="btn btn-filled btn-lg" href="#">Get Started</a>
                     <p>
-                        "What a sick app this is - I've been searching forever for something like this to come along - WOW"
+                        30 Day Free Trial
+                        <br /> No Credit Card Required
                     </p>
-                    <div class="spread-children">
-                        <img alt="Pic" class="image-xs" src="{{level}}img/avatar1.png" />
-                        <span>Anne Bracken - Themeforest</span>
-                    </div>
+                </div>
+                <!--end of pricing table-->
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="pricing-table pt-1 text-center emphasis">
+                    <H5 class="uppercase">Unlimited Users</H5>
+                    <span class="price">$29</span>
+                    <p class="lead">Per Month</p>
+                    <a class="btn btn-white btn-lg" href="#">Get Started</a>
+                    <p>
+                        30 Day Free Trial
+                        <br /> No Credit Card Required
+                    </p>
+                </div>
+                <!--end of pricing table-->
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+    <div class="embelish-icons">
+        <i class="ti-marker"></i>
+        <i class="ti-layout"></i>
+        <i class="ti-ruler-alt-2"></i>
+        <i class="ti-eye"></i>
+        <i class="ti-signal"></i>
+        <i class="ti-pulse"></i>
+        <i class="ti-marker"></i>
+        <i class="ti-layout"></i>
+        <i class="ti-ruler-alt-2"></i>
+        <i class="ti-eye"></i>
+        <i class="ti-signal"></i>
+        <i class="ti-pulse"></i>
+    </div>
+</section>
+<!-- END SECTION 5 - PRICING -->
+<!-- SECTION 6 - CLIENT QUOTE -->
+<section class="image-bg overlay parallax" id="clients">
+    <div class="background-image-holder">
+        <img alt="image" class="background-image" src="{{level}}img/app2.jpg" />
+    </div>
+    <div class="container">
+        <div class="row mb40 mb-xs-24">
+            <div class="col-sm-12 text-center spread-children">
+                <img class="image-xs" alt="Pic" src="{{level}}img/avatar1.png" />
+                <img class="image-xs" alt="Pic" src="{{level}}img/avatar2.png" />
+                <img class="image-xs" alt="Pic" src="{{level}}img/avatar3.png" />
+            </div>
+        </div>
+        <!--end of row-->
+        <div class="row mb16 mb-xs-0">
+            <div class="col-sm-12 text-center">
+                <h3>People just like you are already loving Foundry</h3>
+            </div>
+        </div>
+        <!--end of row-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="text-slider slider-arrow-controls text-center relative">
+                    <ul class="slides">
+                        <li>
+                            <p class="lead">It's clear to see just how seriously these guys take design. I've never come across a template with the level of polish as this - and don't even get me started on the page builder, there is simply NO competition. Customer for life.</p>
+                            <div class="quote-author">
+                                <h6 class="uppercase mb0">Anna Thompson</h6>
+                                <span>Themeforest Customer</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="lead">I love the ease-of-use the builder provides - I can quickly test different combinations and experiment with font and color combinations to find that sweet spot. Kudos for the amazing support too, really quick turnaround!</p>
+                            <div class="quote-author">
+                                <h6 class="uppercase mb0">Rick Dempsey</h6>
+                                <span>Themeforest Customer</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="lead">A fine example of atomic design brought to life. As a seasoned template user, I really appreciate the consistent styling for all common tags, it makes customising the sections that much easier. 5 stars as always for an amazing template.</p>
+                            <div class="quote-author">
+                                <h6 class="uppercase mb0">Gill Sans</h6>
+                                <span>Themeforest Customer</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!--end of container-->
-    </section>
-    <!-- END SECTION 3 - SUPER-FEATURE 1 -->
-    <!-- SECTION 4 - SUPER-FEATURE 2 -->
-    <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40" id="docs">
-        <div class="col-md-6 col-sm-4 p0">
-            <img alt="Screenshot" class="mb-xs-24" src="{{level}}img/app4.jpg" />
-        </div>
-        <div class="container">
-            <div class="col-md-5 col-md-offset-1 col-sm-7 col-sm-offset-1 v-align-transform right">
-                <h3 class="mb40 mb-xs-16">Combine different blocks together to form your perfect layout.</h3>
-                <p class="lead mb40">
-                    We've built three distinct image and text combinations for you to showcase the features of your product or service.
-                </p>
-                <div class="feature feature-3">
-                    <div class="left">
-                        <i class="ti-user icon-sm"></i>
-                    </div>
-                    <div class="right">
-                        <h4 class="mb16">Built for you</h4>
-                    </div>
-                </div>
-                <!--end of feature-->
-                <div class="feature feature-3">
-                    <div class="left">
-                        <i class="ti-package icon-sm"></i>
-                    </div>
-                    <div class="right">
-                        <h4 class="mb16">Incredible Value</h4>
-                    </div>
-                </div>
-                <!--end of feature-->
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<!-- END SECTION 6 - CLIENT QUOTE -->
+<!-- SECTION 7 - REGISTER -->
+<section class="bg-primary">
+    <div class="container">
+        <div class="row mb64 mb-xs-24">
+            <div class="col-sm-12 text-center">
+                <h3>Start building more beautiful pages today.</h3>
             </div>
         </div>
-        <!--end of container-->
-    </section>
-    <!-- END SECTION 4 - SUPER-FEATURE 2 -->
-    <!-- SECTION 5 - PRICING -->
-    <section id="pricing">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <h1 class="thin mb80 mb-xs-24">Pricing? That's easy.</h1>
-                </div>
+        <!--end of row-->
+        <div class="row mb40 mb-xs-24">
+            <div class="col-sm-6 col-sm-offset-3">
+                <form class="form-newsletter halves" data-success="Thanks for your registration, we will be in touch shortly." data-error="Please fill all fields correctly.">
+                    <input type="text" name="email" class="mb0 transparent validate-email validate-required  signup-email-field" placeholder="Email Address" />
+                    <button type="submit" class="btn-white mb0">Start Free</button>
+                    <iframe srcdoc="<!-- Begin MailChimp Signup Form --><link href=&quot;https://cdn-images.mailchimp.com/embedcode/classic-081711.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;><style type=&quot;text/css&quot;>	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */</style><div id=&quot;mc_embed_signup&quot;><form action=&quot;//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=94d040322a&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate>    <div id=&quot;mc_embed_signup_scroll&quot;>	<h2>Subscribe to our mailing list</h2><div class=&quot;indicates-required&quot;><span class=&quot;asterisk&quot;>*</span> indicates required</div><div class=&quot;mc-field-group&quot;>	<label for=&quot;mce-EMAIL&quot;>Email Address  <span class=&quot;asterisk&quot;>*</span></label>	<input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;required email&quot; id=&quot;mce-EMAIL&quot;></div><div class=&quot;mc-field-group&quot;>	<label for=&quot;mce-FNAME&quot;>First Name </label>	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;FNAME&quot; class=&quot;&quot; id=&quot;mce-FNAME&quot;></div><div class=&quot;mc-field-group&quot;>	<label for=&quot;mce-LNAME&quot;>Last Name </label>	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;LNAME&quot; class=&quot;&quot; id=&quot;mce-LNAME&quot;></div>	<div id=&quot;mce-responses&quot; class=&quot;clear&quot;>		<div class=&quot;response&quot; id=&quot;mce-error-response&quot; style=&quot;display:none&quot;></div>		<div class=&quot;response&quot; id=&quot;mce-success-response&quot; style=&quot;display:none&quot;></div>	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->    <div style=&quot;position: absolute; left: -5000px;&quot;><input type=&quot;text&quot; name=&quot;b_77142ece814d3cff52058a51f_94d040322a&quot; tabindex=&quot;-1&quot; value=&quot;&quot;></div>    <div class=&quot;clear&quot;><input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot;></div>    </div></form></div><script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->" class="mail-list-form">
+                    </iframe>
+                </form>
             </div>
-            <!--end of row-->
-            <div class="row">
-                <div class="col-md-4 col-sm-6 col-md-offset-2">
-                    <div class="pricing-table pt-1 text-center">
-                        <H5 class="uppercase">One User</H5>
-                        <span class="price">$12</span>
-                        <p class="lead">Per Month</p>
-                        <a class="btn btn-filled btn-lg" href="#">Get Started</a>
-                        <p>
-                            30 Day Free Trial
-                            <br /> No Credit Card Required
-                        </p>
-                    </div>
-                    <!--end of pricing table-->
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricing-table pt-1 text-center emphasis">
-                        <H5 class="uppercase">Unlimited Users</H5>
-                        <span class="price">$29</span>
-                        <p class="lead">Per Month</p>
-                        <a class="btn btn-white btn-lg" href="#">Get Started</a>
-                        <p>
-                            30 Day Free Trial
-                            <br /> No Credit Card Required
-                        </p>
-                    </div>
-                    <!--end of pricing table-->
-                </div>
-            </div>
-            <!--end of row-->
         </div>
-        <!--end of container-->
-        <div class="embelish-icons">
-            <i class="ti-marker"></i>
-            <i class="ti-layout"></i>
-            <i class="ti-ruler-alt-2"></i>
-            <i class="ti-eye"></i>
-            <i class="ti-signal"></i>
-            <i class="ti-pulse"></i>
-            <i class="ti-marker"></i>
-            <i class="ti-layout"></i>
-            <i class="ti-ruler-alt-2"></i>
-            <i class="ti-eye"></i>
-            <i class="ti-signal"></i>
-            <i class="ti-pulse"></i>
+        <!--end of row-->
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h5 class="fade-half">
+                    <strong>Free 30 day trial - No credit card required.</strong>
+                </h5>
+            </div>
         </div>
-    </section>
-    <!-- END SECTION 5 - PRICING -->
-    <!-- SECTION 6 - CLIENT QUOTE -->
-    <section class="image-bg overlay parallax" id="clients">
-        <div class="background-image-holder">
-            <img alt="image" class="background-image" src="{{level}}img/app2.jpg" />
-        </div>
-        <div class="container">
-            <div class="row mb40 mb-xs-24">
-                <div class="col-sm-12 text-center spread-children">
-                    <img class="image-xs" alt="Pic" src="{{level}}img/avatar1.png" />
-                    <img class="image-xs" alt="Pic" src="{{level}}img/avatar2.png" />
-                    <img class="image-xs" alt="Pic" src="{{level}}img/avatar3.png" />
-                </div>
-            </div>
-            <!--end of row-->
-            <div class="row mb16 mb-xs-0">
-                <div class="col-sm-12 text-center">
-                    <h3>People just like you are already loving Foundry</h3>
-                </div>
-            </div>
-            <!--end of row-->
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                    <div class="text-slider slider-arrow-controls text-center relative">
-                        <ul class="slides">
-                            <li>
-                                <p class="lead">It's clear to see just how seriously these guys take design. I've never come across a template with the level of polish as this - and don't even get me started on the page builder, there is simply NO competition. Customer for life.</p>
-                                <div class="quote-author">
-                                    <h6 class="uppercase mb0">Anna Thompson</h6>
-                                    <span>Themeforest Customer</span>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="lead">I love the ease-of-use the builder provides - I can quickly test different combinations and experiment with font and color combinations to find that sweet spot. Kudos for the amazing support too, really quick turnaround!</p>
-                                <div class="quote-author">
-                                    <h6 class="uppercase mb0">Rick Dempsey</h6>
-                                    <span>Themeforest Customer</span>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="lead">A fine example of atomic design brought to life. As a seasoned template user, I really appreciate the consistent styling for all common tags, it makes customising the sections that much easier. 5 stars as always for an amazing template.</p>
-                                <div class="quote-author">
-                                    <h6 class="uppercase mb0">Gill Sans</h6>
-                                    <span>Themeforest Customer</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </section>
-    <!-- END SECTION 6 - CLIENT QUOTE -->
-    <!-- SECTION 7 - REGISTER -->
-    <section class="bg-primary">
-        <div class="container">
-            <div class="row mb64 mb-xs-24">
-                <div class="col-sm-12 text-center">
-                    <h3>Start building more beautiful pages today.</h3>
-                </div>
-            </div>
-            <!--end of row-->
-            <div class="row mb40 mb-xs-24">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <form class="form-newsletter halves" data-success="Thanks for your registration, we will be in touch shortly." data-error="Please fill all fields correctly.">
-                        <input type="text" name="email" class="mb0 transparent validate-email validate-required  signup-email-field" placeholder="Email Address" />
-                        <button type="submit" class="btn-white mb0">Start Free</button>
-                        <iframe srcdoc="<!-- Begin MailChimp Signup Form --><link href=&quot;https://cdn-images.mailchimp.com/embedcode/classic-081711.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;><style type=&quot;text/css&quot;>	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */</style><div id=&quot;mc_embed_signup&quot;><form action=&quot;//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=94d040322a&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate>    <div id=&quot;mc_embed_signup_scroll&quot;>	<h2>Subscribe to our mailing list</h2><div class=&quot;indicates-required&quot;><span class=&quot;asterisk&quot;>*</span> indicates required</div><div class=&quot;mc-field-group&quot;>	<label for=&quot;mce-EMAIL&quot;>Email Address  <span class=&quot;asterisk&quot;>*</span></label>	<input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;required email&quot; id=&quot;mce-EMAIL&quot;></div><div class=&quot;mc-field-group&quot;>	<label for=&quot;mce-FNAME&quot;>First Name </label>	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;FNAME&quot; class=&quot;&quot; id=&quot;mce-FNAME&quot;></div><div class=&quot;mc-field-group&quot;>	<label for=&quot;mce-LNAME&quot;>Last Name </label>	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;LNAME&quot; class=&quot;&quot; id=&quot;mce-LNAME&quot;></div>	<div id=&quot;mce-responses&quot; class=&quot;clear&quot;>		<div class=&quot;response&quot; id=&quot;mce-error-response&quot; style=&quot;display:none&quot;></div>		<div class=&quot;response&quot; id=&quot;mce-success-response&quot; style=&quot;display:none&quot;></div>	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->    <div style=&quot;position: absolute; left: -5000px;&quot;><input type=&quot;text&quot; name=&quot;b_77142ece814d3cff52058a51f_94d040322a&quot; tabindex=&quot;-1&quot; value=&quot;&quot;></div>    <div class=&quot;clear&quot;><input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot;></div>    </div></form></div><script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->" class="mail-list-form">
-                        </iframe>
-                    </form>
-                </div>
-            </div>
-            <!--end of row-->
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <h5 class="fade-half">
-                        <strong>Free 30 day trial - No credit card required.</strong>
-                    </h5>
-                </div>
-            </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </section>
-    <!-- END SECTION 7 - REGISTER -->
-    <!-- FOOTER -->
-    {{> landing/footer}}
-    <!-- END FOOTER -->
-</div>
-{{> landing/scripts}}
-</body>
-</html>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<!-- END SECTION 7 - REGISTER -->
