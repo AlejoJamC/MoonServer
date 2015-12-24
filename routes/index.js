@@ -84,9 +84,23 @@ indexRouter.get('/terms', function (req, res) {
 
 /* ---------- CROSS-PLATFORM ---------- */
 
+/* GET Confirmation email page. */
+indexRouter.get('/confirmation/:funct', function (req, res) {
+    res.render('landing/confirmation', {
+        title: 'Confirmación '+ req.params.funct + ' | Dynamite Docs',
+        level: '../landing/',
+        layout: 'landing/struct'
+    });
+});
+
+/* POST Confirmation email page. */
+indexRouter.post('/confirmation/:funct', function (req, res) {
+    res.redirect('/');
+});
+
 /* GET Login page. */
 indexRouter.get('/login', function (req, res) {
-    res.render('login', {
+    res.render('dashboard/login', {
         title: 'Iniciar sesión | Dynamite Docs',
         level: ''
     });
@@ -107,6 +121,15 @@ indexRouter.get('/logout', function (req, res) {
 
 /* GET Reset Password page. */
 indexRouter.get('/password/reset', function (req, res) {
+    res.render('landing/passwordReset', {
+        title: 'Recuperar contraseña | Dynamite Docs',
+        level: '../landing/',
+        layout: 'landing/struct'
+    });
+});
+
+/* POST Confirmation email page. */
+indexRouter.post('/password/reset', function (req, res) {
     res.redirect('/');
 });
 
