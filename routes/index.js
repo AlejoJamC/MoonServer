@@ -133,6 +133,15 @@ indexRouter.post('/password/reset', function (req, res) {
     res.redirect('/');
 });
 
+/* GET 404 page not found. */
+indexRouter.get("/*", function(req, res) {
+    res.render('landing/404', {
+        title: 'Oopsss página no encontrada | Dynamite Docs',
+        level: '../landing/',
+        layout: 'landing/struct'
+    });
+});
+
 /* ---------- END CROSS-PLATFORM ---------- */
 
 module.exports = indexRouter;
