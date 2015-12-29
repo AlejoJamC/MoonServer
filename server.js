@@ -9,24 +9,26 @@
 //
 // Module dependencies
 //
-var express         = require('express'),
-    bodyParser      = require('body-parser'),
-    errorHandler    = require('errorhandler'),
-    favicon         = require('serve-favicon'),
-    hbs             = require('express-hbs'),
-    methodOverride  = require('method-override'),
-    moment          = require('moment'),
-    path            = require('path'),
-    session         = require('express-session'),
+var express             = require('express'),
+    bodyParser          = require('body-parser'),
+    errorHandler        = require('errorhandler'),
+    favicon             = require('serve-favicon'),
+    hbs                 = require('express-hbs'),
+    methodOverride      = require('method-override'),
+    moment              = require('moment'),
+    path                = require('path'),
+    session             = require('express-session'),
+    passport            = require('passport'),
+    StormpathStrategy   = require('passport-stormpath'),
 
-    logger          = require('./config/logger').logger,
-    morgan          = require('morgan'),
+    logger              = require('./config/logger').logger,
+    morgan              = require('morgan'),
 
-    routes          = require('./routes/routes'),
+    routes              = require('./routes/routes'),
 
-    environment     = 'devLocal',
-    config          = require('./config/envJamC.json')[environment],
-    port            = config.port;
+    environment         = 'devLocal',
+    config              = require('./config/environment.json')[environment],
+    port                = config.port;
 
 logger.info('Enviroment: ' + environment);
 
@@ -80,21 +82,16 @@ app.use(bodyParser.urlencoded({
 // Import static files.
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Stormpath initialization
-//app.use(stormpath.init(app, {
-//    client:{
-//        apiKey: {
-//            file: config.auth.ApiKeyFile
-//        }
-//    },
-//    application:{
-//        href: config.auth.HREF
-//    },
-//    website: true,
-//    expand: {
-//        customData: true
-//    }
-//}));
+// Stormpath and Passport initialization
+var authStrategy = new StormpathStrategy({
+    apiKeyId:     config.auth.ApiKeyId,
+    apiKeySecret: config.auth.ApiKeySecret,
+    appHref:      config.auth.HREF
+});
+
+passport.use(authStrategy);
+passport.serializeUser(authStrategy.serializeUser);
+passport.deserializeUser(authStrategy.deserializeUser);
 
 // Local variables.
 // Current year.
@@ -110,14 +107,6 @@ if ('devLocal' === env){
     app.use(errorHandler());
 }
 
-// Once stormpath is ready starts the web server
-//app.on('stormpath.ready', function () {
-//    logger.info('Stormpath client initialized successfully!');
-//    // Binds and listens for connections on the specified host and port.
-//    app.listen(app.get('port'), function(){
-//        logger.info('Dynamite is running on http://localhost:' + port + '/');
-//    });
-//});
 app.listen(app.get('port'), function(){
     logger.info('Dynamite is running on http://localhost:' + port + '/');
 });
