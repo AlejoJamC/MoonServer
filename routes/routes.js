@@ -17,11 +17,13 @@ function setupRouter (app){
     // Initialize all routes
     var indexRoutes = require('./index');
     var brachOfficeRoutes = require('./branchOffice');
+    var dashboardRoutes = require('./dashboard');
 
     // Assigned routes
     // Index
     app.use('/', indexRoutes);
     app.use('/', brachOfficeRoutes);
+    app.use('/', dashboardRoutes);
 }
 // Export setup function
 module.exports.setupRouter = setupRouter;
