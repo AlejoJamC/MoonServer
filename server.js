@@ -59,13 +59,6 @@ app.use(morgan('dev'));
 // Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
 app.use(methodOverride());
 
-// Session.
-app.use(session({
-    resave: true,
-    saveUninitialized: true,
-    secret: '3f1l 4 73g 0t d33n yll43r u s1ht d43r n4c u f1'
-}));
-
 // Set Header 'X-Prowered-By'
 logger.info('Dynamite Docs powered by: @AlejoJamC');
 app.use(function (req, res, next) {
@@ -82,6 +75,13 @@ app.use(bodyParser.urlencoded({
 // Import static files.
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Session.
+app.use(session({
+    resave: true,
+    saveUninitialized: true,
+    secret: '3f1l 4 73g 0t d33n yll43r u s1ht d43r n4c u f1'
+}));
+
 // Stormpath and Passport initialization
 var authStrategy = new StormpathStrategy({
     apiKeyId:     config.auth.ApiKeyId,
@@ -92,6 +92,9 @@ var authStrategy = new StormpathStrategy({
 passport.use(authStrategy);
 passport.serializeUser(authStrategy.serializeUser);
 passport.deserializeUser(authStrategy.deserializeUser);
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Local variables.
 // Current year.
