@@ -12,9 +12,40 @@ var branchOfficeRouter = express.Router();
 
 /* GET Branch Office page. */
 branchOfficeRouter.get('/branch/office', function (req, res) {
-    res.render('dashboard', {
+    res.render('dashboard/dashboard', {
+        title: 'Registro | Dynamite Docs',
+        level: '../',
+        layout: 'dashboard/mainStruct',
+        error: ''
+    });
+});
+
+/* GET Create Branch Office page. */
+branchOfficeRouter.get('/branch/office/new', function (req, res) {
+    res.render('dashboard/dashboard', {
         title: 'Registro | Dynamite Docs',
         level: '../../',
+        layout: 'dashboard/mainStruct',
+        error: ''
+    });
+});
+
+/* GET Update Branch Office page. */
+branchOfficeRouter.get('/branch/office/:id', function (req, res) {
+    res.render('dashboard/dashboard', {
+        title: 'Registro | Dynamite Docs',
+        level: '../../',
+        layout: 'dashboard/mainStruct',
+        error: ''
+    });
+});
+
+/* GET Delete Branch Office page. */
+branchOfficeRouter.get('/branch/office/:id/delete', function (req, res) {
+    res.render('dashboard/dashboard', {
+        title: 'Registro | Dynamite Docs',
+        level: '../../../',
+        layout: 'dashboard/mainStruct',
         error: ''
     });
 });
