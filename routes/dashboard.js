@@ -13,9 +13,19 @@ var stormpath = require('stormpath');
 var config = require('../config/envJamC.json');
 var stormpathClient;
 
+/* GET Dashboard page. */
+dashboardRouter.get('/dashboard', function (req, res) {
+    res.render('dashboard/dashboard', {
+        title: 'Panel de control | Dynamite Docs',
+        level: '../',
+        layout: 'dashboard/mainStruct',
+        error: ''
+    });
+});
+
 /* GET Register page. */
 dashboardRouter.get('/dashboard/register', function (req, res) {
-    res.render('register', {
+    res.render('dashboard/register', {
         title: 'Registro | Dynamite Docs',
         level: '',
         error: ''
