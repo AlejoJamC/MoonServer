@@ -9,6 +9,8 @@
 var express = require('express');
 var indexRouter = express.Router();
 var passport = require('passport');
+var stormpath = require('stormpath');
+
 
 /* ---------- MAIN MENU ---------- */
 
@@ -134,13 +136,13 @@ indexRouter.post('/password/reset', function (req, res) {
 });
 
 /* GET 404 page not found. */
-indexRouter.get("/*", function(req, res) {
-    res.render('landing/404', {
-        title: 'Oopsss página no encontrada | Dynamite Docs',
-        level: '../landing/',
-        layout: 'landing/struct'
-    });
-});
+//indexRouter.get("/*", function(req, res) {
+//    res.render('landing/404', {
+//        title: 'Oopsss página no encontrada | Dynamite Docs',
+//        level: '../landing/',
+//        layout: 'landing/struct'
+//    });
+//});
 
 /* ---------- END CROSS-PLATFORM ---------- */
 
