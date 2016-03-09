@@ -104,7 +104,8 @@ indexRouter.post('/confirmation/:funct', function (req, res) {
 indexRouter.get('/login', function (req, res) {
     res.render('dashboard/login', {
         title: 'Iniciar sesión | Dynamite Docs',
-        level: ''
+        level: '',
+        isLogin: true
     });
 });
 

@@ -18,7 +18,11 @@
 <link href="{{level}}css/plugins.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME GLOBAL STYLES -->
 <!-- BEGIN THEME LAYOUT STYLES -->
+{{#if isLogin}}
+<link href="{{level}}css/login-5.min.css" rel="stylesheet" type="text/css" />
+{{else}}
 <link href="{{level}}css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color"/>
+{{/if}}
 <link href="{{level}}css/layout.min.css" rel="stylesheet" type="text/css"/>
 <link href="{{level}}css/custom.min.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
