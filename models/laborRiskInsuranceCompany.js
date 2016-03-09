@@ -11,7 +11,7 @@ var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
 // Define Labor Risk Insurance schema
-var laborRiskInsuranceSchema = new Schema({
+var LaborRiskInsuranceSchema = new Schema({
     name:               String,
     identification:     String,
     address:            String,
@@ -25,4 +25,4 @@ var laborRiskInsuranceSchema = new Schema({
 });
 
 // Export the mongoose model
-module.exports.laborRiskInsurance = mongoose.model('laborRiskInsurance', laborRiskInsuranceSchema);
+module.exports.LaborRiskInsurance = mongoose.model('LaborRiskInsurance', LaborRiskInsuranceSchema);
