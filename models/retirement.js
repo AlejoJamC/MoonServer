@@ -11,7 +11,7 @@ var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
 // Define Company schema
-var retirementCompanySchema = new Schema({
+var retirementSchema = new Schema({
     name:               String,
     identification:     String,
     address:            String,
@@ -25,4 +25,4 @@ var retirementCompanySchema = new Schema({
 });
 
 // Export the mongoose model
-module.exports.RetirementCompany = mongoose.model('retirementCompany', retirementCompanySchema);
+module.exports.Retirement = mongoose.model('retirement', retirementSchema);

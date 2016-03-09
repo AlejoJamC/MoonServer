@@ -14,9 +14,9 @@ var Company                     = require('./company').Company;
 var BranchOffice                = require('./branchOffice').BranchOffice;
 var Department                  = require('./department').Department;
 var Job                         = require('./job').Job;
-var HealthcareCompany           = require('./healthcareCompany').HealthcareCompany;
-var RetirementCompany           = require('./retirementCompany').RetirementCompany;
-var LaborRiskInsuranceCompany   = require('./laborRiskInsuranceCompany').LaborRiskInsurance;
+var Healthcare           = require('./healthcare').Healthcare;
+var Retirement           = require('./retirement').Retirement;
+var LaborRiskInsurance   = require('./laborRiskInsurance').LaborRiskInsurance;
 var CompensationFund         = require('./compensationFund').CompensationFund;
 
 
@@ -39,11 +39,11 @@ var EmployeeSchema = new Schema({
     branchOffice:               [BranchOffice.schema],
     department:                 [Department.schema],
     job:                        [Job.schema],
-    healthcareCompany:          [HealthcareCompany.schema],
+    healthcareCompany:          [Healthcare.schema],
     epsFile:                    String,
-    retirementCompany:          [RetirementCompany.schema],
+    retirementCompany:          [Retirement.schema],
     retirementFile:             String,
-    laborRiskInsuranceCompany:  [LaborRiskInsuranceCompany.schema],
+    laborRiskInsuranceCompany:  [LaborRiskInsurance.schema],
     laborRiskInsuranceFile:     String,
     compensationFund:           [CompensationFund.schema],
     compensationFundFile:       String,

@@ -11,7 +11,7 @@ var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
 // Define Healthcare Company schema
-var HealthcareCompanySchema = new Schema({
+var HealthcareSchema = new Schema({
     name:               String,
     identification:     String,
     address:            String,
@@ -25,4 +25,4 @@ var HealthcareCompanySchema = new Schema({
 });
 
 // Export the mongoose model
-module.exports.HealthcareCompany = mongoose.model('HealthcareCompany', HealthcareCompanySchema);
+module.exports.Healthcare = mongoose.model('Healthcare', HealthcareSchema);
