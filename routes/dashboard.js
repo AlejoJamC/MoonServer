@@ -37,7 +37,8 @@ dashboardRouter.get('/dashboard/timeline', function (req, res) {
 dashboardRouter.get('/dashboard/register', function (req, res) {
     res.render('dashboard/register', {
         title: 'Registro | Dynamite Docs',
-        level: '',
+        level: '../',
+        layout: 'dashboard/mainStruct',
         error: ''
     });
 });
