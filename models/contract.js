@@ -14,7 +14,7 @@ var ContractType            = require('./contractType').ContractType;
 var ContractState           = require('./contractState').ContractState;
 var TerminationContractType = require('./terminationContractType').TerminationContractType;
 
-// Define Employee schema
+// Define Contract schema
 var ContractSchema = new Schema({
     typeContract:       [ContractType.schema],
     stateContract:      [ContractState.schema],

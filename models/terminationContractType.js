@@ -10,7 +10,7 @@
 var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
-// Define Termination of  Contract Type schema
+// Define Termination of Contract Type schema
 var TerminationContractTypeSchema = new Schema({
     name:               String,
     creationDate:       Date,

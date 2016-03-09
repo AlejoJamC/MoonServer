@@ -15,7 +15,7 @@ var Employee        = require('./employee').Employee;
 var Contract        = require('./contract').Contract;
 var NoveltyState    = require('./noveltyState').NoveltyState;
 
-// Define Employee schema
+// Define Novelty schema
 var NoveltySchema = new Schema({
     type:               [NoveltyType.schema],
     employee:           [Employee.schema],
