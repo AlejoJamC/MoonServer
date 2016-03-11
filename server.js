@@ -32,6 +32,10 @@ var express             = require('express'),
 
 logger.info('Enviroment: ' + environment);
 
+// MongoDB connection
+var mongoDB = require('./config/mongodb');
+mongoDB.setupMongoDB(config.mongoDB);
+
 // Express app instance
 var app = express();
 
