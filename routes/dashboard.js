@@ -23,16 +23,6 @@ dashboardRouter.get('/dashboard', function (req, res) {
     });
 });
 
-/* GET Dashboard Timeline page. */
-dashboardRouter.get('/dashboard/timeline', function (req, res) {
-    res.render('dashboard/timeline', {
-        title: 'Timeline | Panel de control | Dynamite Docs',
-        level: '../',
-        layout: 'dashboard/mainStruct',
-        error: ''
-    });
-});
-
 /* GET Register page. */
 dashboardRouter.get('/dashboard/register', function (req, res) {
     res.render('dashboard/register', {
