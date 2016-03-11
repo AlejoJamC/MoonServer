@@ -7,17 +7,17 @@
  */
 
 // Load required packages
-var mongoose                    = require('mongoose');
-var Schema                      = mongoose.Schema;
+var mongoose             = require('mongoose');
+var Schema               = mongoose.Schema;
 
-var Company                     = require('./company').Company;
-var BranchOffice                = require('./branchOffice').BranchOffice;
-var Department                  = require('./department').Department;
-var Job                         = require('./job').Job;
+var Company              = require('./company').Company;
+var BranchOffice         = require('./branchOffice').BranchOffice;
+var Department           = require('./department').Department;
+var Job                  = require('./job').Job;
 var Healthcare           = require('./healthcare').Healthcare;
 var Retirement           = require('./retirement').Retirement;
 var LaborRiskInsurance   = require('./laborRiskInsurance').LaborRiskInsurance;
-var CompensationFund         = require('./compensationFund').CompensationFund;
+var CompensationFund     = require('./compensationFund').CompensationFund;
 
 
 // Define Employee schema

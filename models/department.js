@@ -7,10 +7,10 @@
  */
 
 // Load required packages
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+var mongoose        = require('mongoose');
+var Schema          = mongoose.Schema;
 
-var BranchOffice = require('./branchOffice').BranchOffice;
+var BranchOffice    = require('./branchOffice').BranchOffice;
 
 // Define Department schema
 var DepartmentSchema = new Schema({

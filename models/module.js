@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var mongoose    = require('mongoose');
+var Schema      = mongoose.Schema;
 
 var ModuleSchema = new Schema({
     name:               String,

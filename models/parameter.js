@@ -6,13 +6,13 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var mongoose    = require('mongoose');
+var Schema      = mongoose.Schema;
 
-var Plan = require('./plan').Plan;
-var User = require('./user').User;
-var Subscriber = require('./user').User;
-var Permission = require('./permission').Permission;
+var Plan        = require('./plan').Plan;
+var User        = require('./user').User;
+var Subscriber  = require('./user').User;
+var Permission  = require('./permission').Permission;
 
 var ParameterSchema = new Schema({
     name:               String,
