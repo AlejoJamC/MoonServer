@@ -15,15 +15,54 @@
  */
 function setupRouter (app){
     // Initialize all routes
-    var indexRoutes = require('./index');
-    var brachOfficeRoutes = require('./branchOffice');
-    var dashboardRoutes = require('./dashboard');
+    var brachOfficeRoutes   = require('./branchOffice');
+    var certificationRoutes = require('./certification');
+    var companyRoutes       = require('./company');
+    var compensationRoutes  = require('./compensationFund');
+    var contractRoutes      = require('./contract');
+    var dashboardRoutes     = require('./dashboard');
+    var departmentRoutes    = require('./department');
+    var employeeRoutes      = require('./employee');
+    var healthcareRoutes    = require('./healthcare');
+    var indexRoutes         = require('./index');
+    var jobRoutes           = require('./job');
+    var laborRiskRoutes     = require('./laborRiskInsurance');
+    var moduleRoutes        = require('./module');
+    var noveltyRoutes       = require('./novelty');
+    var parameterRoutes     = require('./parameter');
+    var permissionRoutes    = require('./permission');
+    var sectionRoutes       = require('./section');
+    var timelineRoutes      = require('./timeline');
+    var userRoutes          = require('./user');
 
     // Assigned routes
     // Index
     app.use('/', indexRoutes);
-    app.use('/', brachOfficeRoutes);
+    // Dashboard
     app.use('/', dashboardRoutes);
+    app.use('/', timelineRoutes);
+    // > Company
+    //app.use('/', brachOfficeRoutes);
+    //app.use('/', companyRoutes);
+    //app.use('/', departmentRoutes);
+    //app.use('/', jobRoutes);
+    // > Contract
+    //app.use('/', contractRoutes);
+    // > Employee
+    //app.use('/', certificationRoutes);
+    //app.use('/', compensationRoutes);
+    //app.use('/', employeeRoutes);
+    //app.use('/', healthcareRoutes);
+    //app.use('/', laborRiskRoutes);
+    //app.use('/', noveltyRoutes);
+    // > Settings
+    //app.use('/', moduleRoutes);
+    app.use('/', sectionRoutes);
+    //app.use('/', parameterRoutes);
+    //app.use('/', permissionRoutes);
+    // > User
+    //app.use('/', userRoutes);
+
 }
 // Export setup function
 module.exports.setupRouter = setupRouter;
