@@ -9,9 +9,11 @@
 var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
+var Section     = require('./section').Section;
+
 var ModuleSchema = new Schema({
     name:               String,
-    level:              String,
+    section:            [Section.schema],
     creationDate:       Date,
     lastEditionDate:    Date,
     enabled:            Boolean
