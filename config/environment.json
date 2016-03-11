@@ -12,7 +12,8 @@
       "provider":     "rackspace",
       "username":     "your-rackspace-user-name",
       "apiKey":       "your-rackspace-api-key"
-    }
+    },
+    "mongoDB":"dynamite"
   },
 
   "devServer": {
@@ -28,7 +29,8 @@
       "provider":     "rackspace",
       "username":     "your-rackspace-user-name",
       "apiKey":       "your-rackspace-api-key"
-    }
+    },
+    "mongoDB":"dynamite"
   },
 
   "production": {
@@ -44,6 +46,7 @@
       "provider":     "rackspace",
       "username":     "your-rackspace-user-name",
       "apiKey":       "your-rackspace-api-key"
-    }
+    },
+    "mongoDB":"dynamite"
   }
 }
