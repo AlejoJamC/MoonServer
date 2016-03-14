@@ -56,7 +56,7 @@ function setupRouter (app){
     //app.use('/', laborRiskRoutes);
     //app.use('/', noveltyRoutes);
     // > Settings
-    //app.use('/', moduleRoutes);
+    app.use('/', moduleRoutes);
     app.use('/', sectionRoutes);
     //app.use('/', parameterRoutes);
     //app.use('/', permissionRoutes);
