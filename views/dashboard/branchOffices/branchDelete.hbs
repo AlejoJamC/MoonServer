@@ -1,0 +1,40 @@
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <!-- BEGIN PAGE HEADER-->
+        <!-- BEGIN PAGE TITLE-->
+        <h3 class="page-title"> Editable Datatables
+            <small>editable datatable samples</small>
+        </h3>
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="note note-danger">
+                    <h4 class="block">Danger! Some Header Goes Here</h4>
+                    <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit mattis consectetur purus sit amet.\ Cras mattis consectetur purus sit amet fermentum. </p>
+                    <h3>Directions</h3>
+                </div>
+                <button class="btn red-mint" data-toggle="confirmation" data-placement="right" data-btn-ok-label="Continue" data-btn-ok-icon="icon-like" data-btn-ok-class="btn-success" data-btn-cancel-label="Stoooop!"
+                        data-btn-cancel-icon="icon-close" data-btn-cancel-class="btn-danger">Eliminar elemento</button>
+                <button class="btn btn-default">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{#contentFor 'pageScripts'}}
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="{{level}}plugins/jquery.pulsate.min.js" type="text/javascript"></script>
+    <script src="{{level}}plugins/jquery-bootpag/jquery.bootpag.min.js" type="text/javascript"></script>
+    <script src="{{level}}plugins/holder.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="{{level}}plugins/bootstrap-confirmation/bootstrap-confirmation.min.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="{{level}}scripts/ui-confirmations.min.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="{{level}}scripts/ui-general.min.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+{{/contentFor}}
