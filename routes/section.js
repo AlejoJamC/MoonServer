@@ -38,7 +38,6 @@ sectionRouter.get('/ajustes/secciones', function (req, res) {
 
 /* GET section edit option page */
 // Route '/settings/sections/:id'
-
 sectionRouter.get('/ajustes/secciones/:id', function (req, res) {
     var data = '';
     var error = '';
@@ -60,6 +59,8 @@ sectionRouter.get('/ajustes/secciones/:id', function (req, res) {
     });
 });
 
+/* GET section delete option page */
+// Route '/settings/sections/:id/delete'
 sectionRouter.get('/ajustes/secciones/:id/eliminar', function (req, res) {
     var data = '';
     var error = '';
