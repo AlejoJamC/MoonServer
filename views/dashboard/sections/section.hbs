@@ -45,15 +45,17 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td> Ajustes </td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
+                            {{#each data}}
+                                <tr>
+                                    <td>{{@name}}: {{this}}</td>
+                                    <td>
+                                        <a class="edit" href="javascript:;"> Edit </a>
+                                    </td>
+                                    <td>
+                                        <a class="delete" href="javascript:;"> Delete </a>
+                                    </td>
+                                </tr>
+                            {{/each}}
                             </tbody>
                         </table>
                     </div>
