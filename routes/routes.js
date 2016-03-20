@@ -61,7 +61,7 @@ function setupRouter (app){
     //app.use('/', parameterRoutes);
     //app.use('/', permissionRoutes);
     // > User
-    //app.use('/', userRoutes);
+    app.use('/', userRoutes);
 
 }
 // Export setup function
