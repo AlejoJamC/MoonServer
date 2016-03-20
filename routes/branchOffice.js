@@ -11,8 +11,9 @@ var branchOfficeRouter = express.Router();
 
 
 /* GET Branch Office page. */
-branchOfficeRouter.get('/branch/offices', function (req, res) {
-    res.render('dashboard/dashboard', {
+// Routes /branch/offices
+branchOfficeRouter.get('/sucursales', function (req, res) {
+    res.render('dashboard/branchOffices/branchOffices', {
         title: 'Registro | Dynamite Docs',
         level: '../',
         layout: 'dashboard/mainStruct',
@@ -21,8 +22,9 @@ branchOfficeRouter.get('/branch/offices', function (req, res) {
 });
 
 /* GET Create Branch Office page. */
-branchOfficeRouter.get('/branch/offices/new', function (req, res) {
-    res.render('dashboard/dashboard', {
+// Route /branch/offices/new
+branchOfficeRouter.get('/sucursales/agregar', function (req, res) {
+    res.render('dashboard/branchOffices/branchOffices', {
         title: 'Registro | Dynamite Docs',
         level: '../../',
         layout: 'dashboard/mainStruct',
@@ -31,8 +33,9 @@ branchOfficeRouter.get('/branch/offices/new', function (req, res) {
 });
 
 /* GET Update Branch Office page. */
-branchOfficeRouter.get('/branch/offices/:id', function (req, res) {
-    res.render('dashboard/dashboard', {
+// Route /branch/offices/:id
+branchOfficeRouter.get('/sucursales/:id', function (req, res) {
+    res.render('dashboard/branchOffices/branchEdit', {
         title: 'Registro | Dynamite Docs',
         level: '../../',
         layout: 'dashboard/mainStruct',
@@ -41,8 +44,9 @@ branchOfficeRouter.get('/branch/offices/:id', function (req, res) {
 });
 
 /* GET Delete Branch Office page. */
-branchOfficeRouter.get('/branch/offices/:id/delete', function (req, res) {
-    res.render('dashboard/dashboard', {
+// Route /branch/offices/:id/delete
+branchOfficeRouter.get('/sucursales/:id/eliminar', function (req, res) {
+    res.render('dashboard/branchOffices/branchDelete', {
         title: 'Registro | Dynamite Docs',
         level: '../../../',
         layout: 'dashboard/mainStruct',

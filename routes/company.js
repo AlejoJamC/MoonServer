@@ -11,8 +11,9 @@ var companyRouter = express.Router();
 
 
 /* GET Branch Office page. */
-companyRouter.get('/companies', function (req, res) {
-    res.render('dashboard/dashboard', {
+// Route '/companies'
+companyRouter.get('/empresas', function (req, res) {
+    res.render('dashboard/companies/companies', {
         title: 'Registro | Dynamite Docs',
         level: '../',
         layout: 'dashboard/mainStruct',
@@ -21,8 +22,9 @@ companyRouter.get('/companies', function (req, res) {
 });
 
 /* GET Create Branch Office page. */
-companyRouter.get('/companies/new', function (req, res) {
-    res.render('dashboard/dashboard', {
+// Route '/companies/new'
+companyRouter.get('/empresas/agregar', function (req, res) {
+    res.render('dashboard/companies/companies', {
         title: 'Registro | Dynamite Docs',
         level: '../../',
         layout: 'dashboard/mainStruct',
@@ -31,8 +33,9 @@ companyRouter.get('/companies/new', function (req, res) {
 });
 
 /* GET Update Branch Office page. */
-companyRouter.get('/companies/:id', function (req, res) {
-    res.render('dashboard/dashboard', {
+// Route '/companies/:id'
+companyRouter.get('/empresas/:id', function (req, res) {
+    res.render('dashboard/companies/companyEdit', {
         title: 'Registro | Dynamite Docs',
         level: '../../',
         layout: 'dashboard/mainStruct',
@@ -41,8 +44,9 @@ companyRouter.get('/companies/:id', function (req, res) {
 });
 
 /* GET Delete Branch Office page. */
-companyRouter.get('/companies/:id/delete', function (req, res) {
-    res.render('dashboard/dashboard', {
+// Route '/companies/:id/delete'
+companyRouter.get('/empresas/:id/eliminar', function (req, res) {
+    res.render('dashboard/companies/companyDelete', {
         title: 'Registro | Dynamite Docs',
         level: '../../../',
         layout: 'dashboard/mainStruct',

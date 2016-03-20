@@ -42,8 +42,8 @@ function setupRouter (app){
     app.use('/', dashboardRoutes);
     app.use('/', timelineRoutes);
     // > Company
-    //app.use('/', brachOfficeRoutes);
-    //app.use('/', companyRoutes);
+    app.use('/', brachOfficeRoutes);
+    app.use('/', companyRoutes);
     //app.use('/', departmentRoutes);
     //app.use('/', jobRoutes);
     // > Contract
