@@ -7,6 +7,7 @@
  */
 
 // GLOBAL
+// TODO: cambiar el archivo de configuracion por uno parecido a .env de laravel
 // TODO: agregar soporte para i18n-2
 // TODO: Agregar en la documentacion la definicion del modelo de datos y si es aplicable al pais y como cambiarlo
 
