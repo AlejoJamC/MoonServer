@@ -20,9 +20,7 @@
     "rackspace",
     "cloudfiles",
     "files",
-    "dms",
-    "firebase",
-    "parse.com"
+    "dms"
   ],
   "author": "Alejandro Mantilla <@AlejoJamC>",
   "license": "BSD-3-Clause",
