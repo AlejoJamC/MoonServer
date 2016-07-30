@@ -1,3 +1,6 @@
+# WebStorm IDE
+.idea/
+
 # Logs
 logs/
 *.log
@@ -12,29 +15,10 @@ node_modules
 # Globals
 .DS_Store
 thumbs.db
-
-# WebStorm IDE
-.idea/
+*.html
 
 # Public
-# Premium Template Metronic
-# You can buy it on themeforest
-# http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469
-public/css/
-public/img/
-public/landing/
-public/landing/css/
-public/landing/fonts/
-public/landing/img/
-public/landing/js/
-public/landing/video/
-public/media/
-public/plugins/
-public/scripts/
 public/favicon.ico
-
-
-*.html
 
 # Configuration folder
 # Origiginal values
