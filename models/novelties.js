@@ -12,8 +12,8 @@
 
 var mongoose        = require('mongoose');
 var NoveltyType     = require('./noveltyType').NoveltyType;
-var Employee        = require('./employee').Employee;
-var Contract        = require('./contract').Contract;
+var Employee        = require('./employees').Employee;
+var Contract        = require('./contracts').Contract;
 var NoveltyState    = require('./noveltyState').NoveltyState;
 
 /**

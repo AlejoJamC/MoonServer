@@ -12,8 +12,8 @@
 
 var mongoose    = require('mongoose');
 var Plan        = require('./plan').Plan;
-var User        = require('./users').User;
-var Subscriber  = require('./users').User;
+var User        = require('./user').User;
+var Subscriber  = require('./user').User;
 var Permission  = require('./permission').Permission;
 
 /**

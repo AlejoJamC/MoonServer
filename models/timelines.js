@@ -11,10 +11,10 @@
  */
 
 var mongoose = require('mongoose');
-var BranchOffice = require('./branchOffice').BranchOffice;
+var BranchOffice = require('./branchOffices').BranchOffice;
 var TimelineEventType = require('./timelineEventType').TimelineEventType;
-var User = require('./users').User;
-var Employee = require('./employee').Employee;
+var User = require('./user').User;
+var Employee = require('./employees').Employee;
 
 /**
  * Define 'Timeline' schema.

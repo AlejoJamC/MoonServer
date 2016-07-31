@@ -12,7 +12,7 @@
 
 var mongoose    = require('mongoose');
 
-var Department = require('./department').Department;
+var Department = require('./departments').Department;
 
 /**
  * Define 'Job' schema.
