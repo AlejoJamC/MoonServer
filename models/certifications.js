@@ -11,8 +11,8 @@
  */
 
 var mongoose    = require('mongoose');
-var Contract    = require('./contract').Contract;
-var Employee    = require('./employee').Employee;
+var Contract    = require('./contracts').Contract;
+var Employee    = require('./employees').Employee;
 
 /**
  * Define 'Certification' schema.

@@ -11,14 +11,14 @@
  */
 
 var mongoose             = require('mongoose');
-var Company              = require('./company').Company;
-var BranchOffice         = require('./branchOffice').BranchOffice;
-var Department           = require('./department').Department;
-var Job                  = require('./job').Job;
-var Healthcare           = require('./healthcare').Healthcare;
-var Retirement           = require('./retirement').Retirement;
-var LaborRiskInsurance   = require('./laborRiskInsurance').LaborRiskInsurance;
-var CompensationFund     = require('./compensationFund').CompensationFund;
+var Company              = require('./companies').Company;
+var BranchOffice         = require('./branchOffices').BranchOffice;
+var Department           = require('./departments').Department;
+var Job                  = require('./jobs').Job;
+var Healthcare           = require('./healthcares').Healthcare;
+var Retirement           = require('./retirements').Retirement;
+var LaborRiskInsurance   = require('./laborRiskInsurances').LaborRiskInsurance;
+var CompensationFund     = require('./compensationFunds').CompensationFund;
 
 /**
  * Define 'Employee' schema.

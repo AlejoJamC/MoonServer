@@ -12,8 +12,8 @@
 
 var mongoose = require('mongoose');
 var BranchOffice = require('./branchOffices').BranchOffice;
-var TimelineEventType = require('./timelineEventType').TimelineEventType;
-var User = require('./user').User;
+var TimelineEventType = require('./timelineEventTypes').TimelineEventType;
+var User = require('./users').User;
 var Employee = require('./employees').Employee;
 
 /**

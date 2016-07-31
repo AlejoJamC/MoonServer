@@ -11,7 +11,7 @@
  */
 
 var mongoose    = require('mongoose');
-var Company     = require('./company').Company;
+var Company     = require('./companies').Company;
 
 /**
  * Define 'BranchOffice' schema.

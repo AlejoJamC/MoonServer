@@ -7,7 +7,7 @@
  */
 
 var mongoose    = require('mongoose');
-var Section     = require('./section').Section;
+var Section     = require('./sections').Section;
 
 /**
  * Define 'Module' schema.

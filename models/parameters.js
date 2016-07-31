@@ -11,10 +11,10 @@
  */
 
 var mongoose    = require('mongoose');
-var Plan        = require('./plan').Plan;
-var User        = require('./user').User;
-var Subscriber  = require('./user').User;
-var Permission  = require('./permission').Permission;
+var Plan        = require('./plans').Plan;
+var User        = require('./users').User;
+var Subscriber  = require('./users').User;
+var Permission  = require('./permissions').Permission;
 
 /**
  * Define 'Parameter' schema.

@@ -11,9 +11,9 @@
  */
 
 var mongoose                = require('mongoose');
-var ContractType            = require('./contractType').ContractType;
-var ContractState           = require('./contractState').ContractState;
-var TerminationContractType = require('./terminationContractType').TerminationContractType;
+var ContractType            = require('./contractTypes').ContractType;
+var ContractState           = require('./contractStates').ContractState;
+var TerminationContractType = require('./terminationContractTypes').TerminationContractType;
 
 /**
  * Define 'Contract' schema.

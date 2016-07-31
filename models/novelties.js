@@ -11,10 +11,10 @@
  */
 
 var mongoose        = require('mongoose');
-var NoveltyType     = require('./noveltyType').NoveltyType;
+var NoveltyType     = require('./noveltyTypes').NoveltyType;
 var Employee        = require('./employees').Employee;
 var Contract        = require('./contracts').Contract;
-var NoveltyState    = require('./noveltyState').NoveltyState;
+var NoveltyState    = require('./noveltyStates').NoveltyState;
 
 /**
  * Define 'Novelty' schema.

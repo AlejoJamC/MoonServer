@@ -11,26 +11,26 @@
  */
 
 var mongoose    = require('mongoose');
-var Module      = require('./modules').Module;
 
 /**
- * Define 'Permission' schema.
+ * Define 'CompensationFund' schema.
  */
 
-var PermissionSchema = new mongoose.Schema({
+var CompensationFundSchema = new mongoose.Schema({
     name:               String,
-    module:             [Module.schema],
-    read:               Boolean,
-    create:             Boolean,
-    update:             Boolean,
-    delete:             Boolean,
+    identification:     String,
+    address:            String,
+    telephone:          String,
+    email:              String,
+    contact:            String,
+    ContactTelephone:   String,
     creationDate:       Date,
     lastEditionDate:    Date,
     enabled:            Boolean
 });
 
 /**
- * Expose 'Permission'.
+ * Expose 'CompensationFund'.
  */
 
-module.exports.Permission = mongoose.model('Permission',PermissionSchema);
+module.exports.CompensationFund = mongoose.model('CompensationFund', CompensationFundSchema);
