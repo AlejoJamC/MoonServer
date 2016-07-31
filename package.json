@@ -46,6 +46,8 @@
     "mongoose": "^4.2.8",
     "morgan": "^1.6.1",
     "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
     "passport-stormpath": "^0.2.4",
     "pkgcloud": "^1.2.0-alpha.0",
     "request": "^2.67.0",
