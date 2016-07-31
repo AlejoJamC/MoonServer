@@ -15,25 +15,25 @@
  */
 function setupRouter (app){
     // Initialize all routes
-    var brachOfficeRoutes   = require('./branchOffice');
-    var certificationRoutes = require('./certification');
-    var companyRoutes       = require('./company');
-    var compensationRoutes  = require('./compensationFund');
-    var contractRoutes      = require('./contract');
+    var brachOfficeRoutes   = require('./branchOffices');
+    var certificationRoutes = require('./certifications');
+    var companyRoutes       = require('./companies');
+    var compensationRoutes  = require('./compensationFunds');
+    var contractRoutes      = require('./contracts');
     var dashboardRoutes     = require('./dashboard');
-    var departmentRoutes    = require('./department');
-    var employeeRoutes      = require('./employee');
-    var healthcareRoutes    = require('./healthcare');
+    var departmentRoutes    = require('./departments');
+    var employeeRoutes      = require('./employees');
+    var healthcareRoutes    = require('./healthcares');
     var indexRoutes         = require('./index');
-    var jobRoutes           = require('./job');
-    var laborRiskRoutes     = require('./laborRiskInsurance');
-    var moduleRoutes        = require('./module');
-    var noveltyRoutes       = require('./novelty');
-    var parameterRoutes     = require('./parameter');
-    var permissionRoutes    = require('./permission');
-    var sectionRoutes       = require('./section');
-    var timelineRoutes      = require('./timeline');
-    var userRoutes          = require('./user');
+    var jobRoutes           = require('./jobs');
+    var laborRiskRoutes     = require('./laborRiskInsurances');
+    var moduleRoutes        = require('./modules');
+    var noveltyRoutes       = require('./novelties');
+    var parameterRoutes     = require('./parameters');
+    var permissionRoutes    = require('./permissions');
+    var sectionRoutes       = require('./sections');
+    var timelineRoutes      = require('./timelines');
+    var userRoutes          = require('./users');
 
     // Assigned routes
     // Index

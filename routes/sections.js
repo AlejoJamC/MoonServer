@@ -9,7 +9,7 @@
 var express         = require('express');
 var sectionRouter   = express.Router();
 var logger          = require('../config/logger').logger;
-var Section         = require('../models/section').Section;
+var Section         = require('../models/sections').Section;
 
 /* GET sidebar section page. */
 // Route '/settings/sections'

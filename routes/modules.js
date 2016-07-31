@@ -10,7 +10,7 @@ var express = require('express');
 var moduleRouter = express.Router();
 
 var logger = require('../config/logger').logger;
-var Module = require('../models/module').Module;
+var Module = require('../models/modules').Module;
 
 /* GET Dashboard Timeline page. */
 // Route '/settings/modules'
