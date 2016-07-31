@@ -6,14 +6,15 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
+var mongoose    = require('mongoose');
 var Company     = require('./company').Company;
 
 // Define Branch Office schema
-var BranchOfficeSchema = new Schema({
+var BranchOfficeSchema = new mongoose.Schema({
     name:               String,
     identification:     String,
     address:            String,
