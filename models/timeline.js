@@ -6,17 +6,21 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
+var mongoose = require('mongoose');
 var BranchOffice = require('./branchOffice').BranchOffice;
 var TimelineEventType = require('./timelineEventType').TimelineEventType;
-var User = require('./user').User;
+var User = require('./users').User;
 var Employee = require('./employee').Employee;
 
-// Define Timeline Schema
-var TimelineSchema = new Schema({
+/**
+ * Define 'Timeline' schema.
+ */
+
+var TimelineSchema = new mongoose.Schema({
     level:              String,
     branchOffice:       [BranchOffice.schema],
     user:               [User.schema],
@@ -27,5 +31,9 @@ var TimelineSchema = new Schema({
     lastEditionDate:    Date,
     enabled:            Boolean
 });
+
+/**
+ * Expose 'Timeline'.
+ */
 
 module.exports.Timeline = mongoose.model('Timeline',TimelineSchema);

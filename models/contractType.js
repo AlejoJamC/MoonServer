@@ -6,17 +6,25 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
-// Define Type of Contract schema
-var ContractTypeSchema = new Schema({
+var mongoose    = require('mongoose');
+
+/**
+ * Define 'ContractType' schema.
+ */
+
+var ContractTypeSchema = new mongoose.Schema({
     name:               String,
     creationDate:       Date,
     lastEditionDate:    Date,
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'ContractType'.
+ */
+
 module.exports.ContractType = mongoose.model('ContractType', ContractTypeSchema);

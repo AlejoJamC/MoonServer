@@ -6,15 +6,21 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
+var mongoose    = require('mongoose');
 var Plan        = require('./plan').Plan;
-var User        = require('./user').User;
-var Subscriber  = require('./user').User;
+var User        = require('./users').User;
+var Subscriber  = require('./users').User;
 var Permission  = require('./permission').Permission;
 
-var ParameterSchema = new Schema({
+/**
+ * Define 'Parameter' schema.
+ */
+
+var ParameterSchema = new mongoose.Schema({
     name:               String,
     plan:               [Plan.schema],
     user:               [User.schema],
@@ -24,5 +30,9 @@ var ParameterSchema = new Schema({
     lastEditionDate:    Date,
     enabled:            Boolean
 });
+
+/**
+ * Expose 'Parameter'.
+ */
 
 module.exports.Parameter = mongoose.model('Parameter',ParameterSchema);

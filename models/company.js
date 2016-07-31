@@ -6,12 +6,17 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
-// Define Company schema
-var CompanySchema = new Schema({
+var mongoose    = require('mongoose');
+
+/**
+ * Define 'Company' schema.
+ */
+
+var CompanySchema = new mongoose.Schema({
     name:               String,
     identification:     String,
     address:            String,
@@ -24,5 +29,8 @@ var CompanySchema = new Schema({
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'Company'.
+ */
+
 module.exports.Company = mongoose.model('Company', CompanySchema);

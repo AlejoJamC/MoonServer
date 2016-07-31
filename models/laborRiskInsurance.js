@@ -6,12 +6,17 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
-// Define Labor Risk Insurance schema
-var LaborRiskInsuranceSchema = new Schema({
+var mongoose    = require('mongoose');
+
+/**
+ * Define 'LaborRiskInsurance' schema.
+ */
+
+var LaborRiskInsuranceSchema = new mongoose.Schema({
     name:               String,
     identification:     String,
     address:            String,
@@ -24,5 +29,8 @@ var LaborRiskInsuranceSchema = new Schema({
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'LaborRiskInsurance'.
+ */
+
 module.exports.LaborRiskInsurance = mongoose.model('LaborRiskInsurance', LaborRiskInsuranceSchema);

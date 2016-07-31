@@ -13,7 +13,7 @@
 var mongoose    = require('mongoose');
 var logger      = require('../config/logger').Logger;
 var bcrypt      = require('bcrypt-nodejs');
-//TODO: agregar perfiles y roles 
+//TODO: agregar perfiles y roles
 
 /**
  * Define 'User' schema.

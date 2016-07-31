@@ -6,12 +6,17 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
-// Define Family Compensation Fund schema
-var CompensationFundSchema = new Schema({
+var mongoose    = require('mongoose');
+
+/**
+ * Define 'CompensationFund' schema.
+ */
+
+var CompensationFundSchema = new mongoose.Schema({
     name:               String,
     identification:     String,
     address:            String,
@@ -24,5 +29,8 @@ var CompensationFundSchema = new Schema({
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'CompensationFund'.
+ */
+
 module.exports.CompensationFund = mongoose.model('CompensationFund', CompensationFundSchema);

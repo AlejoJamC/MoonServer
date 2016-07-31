@@ -13,7 +13,10 @@
 var mongoose    = require('mongoose');
 var Company     = require('./company').Company;
 
-// Define Branch Office schema
+/**
+ * Define 'BranchOffice' schema.
+ */
+
 var BranchOfficeSchema = new mongoose.Schema({
     name:               String,
     identification:     String,
@@ -28,5 +31,8 @@ var BranchOfficeSchema = new mongoose.Schema({
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'BranchOffice'.
+ */
+
 module.exports.BranchOffice = mongoose.model('BranchOffice', BranchOfficeSchema);

@@ -6,15 +6,19 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
+var mongoose    = require('mongoose');
 var Contract    = require('./contract').Contract;
 var Employee    = require('./employee').Employee;
 
-// Define Certification schema
-var CertificationSchema = new Schema({
+/**
+ * Define 'Certification' schema.
+ */
+
+var CertificationSchema = new mongoose.Schema({
     name:               String,
     employee:           [Employee.schema],
     contract:           [Contract.schema],
@@ -23,5 +27,8 @@ var CertificationSchema = new Schema({
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'Certification'.
+ */
+
 module.exports.Certification = mongoose.model('Certification', CertificationSchema);

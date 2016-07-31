@@ -6,10 +6,17 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
-var PlanSchema = new Schema({
+var mongoose    = require('mongoose');
+
+/**
+ * Define 'Plan' schema.
+ */
+
+var PlanSchema = new mongoose.Schema({
     name:               String,
     price:              Number,
     SMSLimit:           Number,
@@ -20,5 +27,9 @@ var PlanSchema = new Schema({
     lastEditionDate:    Date,
     enabled:            Boolean
 });
+
+/**
+ * Expose 'Plan'.
+ */
 
 module.exports.Plan = mongoose.model('Plan',PlanSchema);

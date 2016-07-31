@@ -6,17 +6,21 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose        = require('mongoose');
-var Schema          = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
+var mongoose        = require('mongoose');
 var NoveltyType     = require('./noveltyType').NoveltyType;
 var Employee        = require('./employee').Employee;
 var Contract        = require('./contract').Contract;
 var NoveltyState    = require('./noveltyState').NoveltyState;
 
-// Define Novelty schema
-var NoveltySchema = new Schema({
+/**
+ * Define 'Novelty' schema.
+ */
+
+var NoveltySchema = new mongoose.Schema({
     type:               [NoveltyType.schema],
     employee:           [Employee.schema],
     contract:           [Contract.schema],
@@ -32,5 +36,8 @@ var NoveltySchema = new Schema({
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'Novelty'.
+ */
+
 module.exports.Novelty = mongoose.model('Novelty', NoveltySchema);

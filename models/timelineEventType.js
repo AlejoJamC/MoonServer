@@ -6,17 +6,26 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
-// Define Timeline Event Types schema
-var TimelineEventTypeSchema = new Schema({
+var mongoose = require('mongoose');
+
+/**
+ * Define 'TimelineEventType' schema.
+ */
+
+var TimelineEventTypeSchema = new mongoose.Schema({
     name:               String,
     color:              String,
     creationDate:       Date,
     lastEditionDate:    Date,
     enabled:            Boolean
 });
+
+/**
+ * Expose 'TimelineEventType'.
+ */
 
 module.exports.TimelineEventType = mongoose.model('TimelineEventType', TimelineEventTypeSchema);

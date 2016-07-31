@@ -6,17 +6,25 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
-// Define Contract State schema
-var ContractStateSchema = new Schema({
+var mongoose    = require('mongoose');
+
+/**
+ * Define 'ContractState' schema.
+ */
+
+var ContractStateSchema = new mongoose.Schema({
     name:               String,
     creationDate:       Date,
     lastEditionDate:    Date,
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'ContractState'.
+ */
+
 module.exports.ContractState = mongoose.model('ContractState', ContractStateSchema);

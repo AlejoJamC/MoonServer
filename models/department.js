@@ -6,14 +6,18 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose        = require('mongoose');
-var Schema          = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
+var mongoose        = require('mongoose');
 var BranchOffice    = require('./branchOffice').BranchOffice;
 
-// Define Department schema
-var DepartmentSchema = new Schema({
+/**
+ * Define 'Department' schema.
+ */
+
+var DepartmentSchema = new mongoose.Schema({
     name:               String,
     branchOffice:       [BranchOffice.schema],
     creationDate:       Date,
@@ -21,5 +25,8 @@ var DepartmentSchema = new Schema({
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'Department'.
+ */
+
 module.exports.Department = mongoose.model('Department', DepartmentSchema);

@@ -6,14 +6,19 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
+/**
+ * Module dependencies.
+ */
+
 var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
 
 var Department = require('./department').Department;
 
-// Define Jobs schema
-var JobSchema = new Schema({
+/**
+ * Define 'Job' schema.
+ */
+
+var JobSchema = new mongoose.Schema({
     name:               String,
     department:         [Department.schema],
     creationDate:       Date,
@@ -21,5 +26,8 @@ var JobSchema = new Schema({
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'Job'.
+ */
+
 module.exports.Job = mongoose.model('Job', JobSchema);

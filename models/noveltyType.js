@@ -6,17 +6,25 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
-// Define Type of Novelty schema
-var NoveltyTypeSchema = new Schema({
+var mongoose    = require('mongoose');
+
+/**
+ * Define 'NoveltyType' schema.
+ */
+
+var NoveltyTypeSchema = new mongoose.Schema({
     name:               String,
     creationDate:       Date,
     lastEditionDate:    Date,
     enabled:            Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'NoveltyType'.
+ */
+
 module.exports.NoveltyType = mongoose.model('NoveltyType', NoveltyTypeSchema);

@@ -6,10 +6,11 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-// Load required packages
-var mongoose             = require('mongoose');
-var Schema               = mongoose.Schema;
+/**
+ * Module dependencies.
+ */
 
+var mongoose             = require('mongoose');
 var Company              = require('./company').Company;
 var BranchOffice         = require('./branchOffice').BranchOffice;
 var Department           = require('./department').Department;
@@ -19,9 +20,11 @@ var Retirement           = require('./retirement').Retirement;
 var LaborRiskInsurance   = require('./laborRiskInsurance').LaborRiskInsurance;
 var CompensationFund     = require('./compensationFund').CompensationFund;
 
+/**
+ * Define 'Employee' schema.
+ */
 
-// Define Employee schema
-var EmployeeSchema = new Schema({
+var EmployeeSchema = new mongoose.Schema({
     name:                       String,
     lastName:                   String,
     identification:             String,
@@ -53,5 +56,8 @@ var EmployeeSchema = new Schema({
     enabled:                    Boolean
 });
 
-// Export the mongoose model
+/**
+ * Expose 'Employee'.
+ */
+
 module.exports.Employee = mongoose.model('Employee', EmployeeSchema);

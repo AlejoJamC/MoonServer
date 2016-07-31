@@ -7,16 +7,22 @@
  */
 
 var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
-
 var Section     = require('./section').Section;
 
-var ModuleSchema = new Schema({
+/**
+ * Define 'Module' schema.
+ */
+
+var ModuleSchema = new mongoose.Schema({
     name:               String,
     section:            [Section.schema],
     creationDate:       Date,
     lastEditionDate:    Date,
     enabled:            Boolean
 });
+
+/**
+ * Expose 'Module'.
+ */
 
 module.exports.Module = mongoose.model('Module',ModuleSchema);
