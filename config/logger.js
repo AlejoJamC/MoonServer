@@ -6,16 +6,18 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-//
-// Module dependencies
-//
+/**
+ * Module dependencies
+ */
+
+// TODO: evitar error si la carpeta logs no existe, crear la carpeta por codigo
 var fs          = require('fs'),
     path        = require('path'),
     winston     = require('winston'),
 
-    filedebug   = path.join(__dirname,'..','logs','debuglogs.log'),
-    filerror    = path.join(__dirname,'..','logs','errorlogs.log'),
-    fileinfo    = path.join(__dirname,'..','logs','infologs.log');
+    filedebug   = path.join(__dirname,'..','logs','debug.log'),
+    filerror    = path.join(__dirname,'..','logs','error.log'),
+    fileinfo    = path.join(__dirname,'..','logs','info.log');
 
 // Activate winston emitter
 winston.emitErrs = true;
@@ -67,9 +69,8 @@ var logger = new (winston.Logger)({
     exitOnError: false
 });
 
-module.exports.logger = logger;
-//module.exports.stream = {
-//    write: function(message, encoding){
-//        logger.info(message);
-//    }
-//};
+/**
+ * Export winston logger coniguration
+ */
+
+module.exports.Logger = logger;
