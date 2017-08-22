@@ -10,14 +10,23 @@
  * Module dependencies
  */
 
-// TODO: evitar error si la carpeta logs no existe, crear la carpeta por codigo
 var fs          = require('fs'),
     path        = require('path'),
     winston     = require('winston'),
 
-    filedebug   = path.join(__dirname,'..','logs','debug.log'),
-    filerror    = path.join(__dirname,'..','logs','error.log'),
-    fileinfo    = path.join(__dirname,'..','logs','info.log');
+    folderlogs    = path.join(__dirname,'..','logs'),
+
+    filedebug   = path.join(folderlogs,'debug.log'),
+    filerror    = path.join(folderlogs,'error.log'),
+    fileinfo    = path.join(folderlogs,'info.log');
+
+/**
+ * Check if folder logs exists.
+ */
+
+if(!(fs.existsSync(folderlogs))){
+    fs.mkdirSync(folderlogs);
+}
 
 // Activate winston emitter
 winston.emitErrs = true;

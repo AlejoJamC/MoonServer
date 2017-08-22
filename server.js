@@ -21,7 +21,7 @@ var express             = require('express'),
     passport            = require('passport'),
     StormpathStrategy   = require('passport-stormpath'),
 
-    logger              = require('./config/logger').logger,
+    logger              = require('./config/logger').Logger,
     morgan              = require('morgan'),
 
     routes              = require('./routes/routes'),
@@ -34,7 +34,7 @@ logger.info('Enviroment: ' + environment);
 
 // MongoDB connection
 var mongoDB = require('./config/mongodb');
-mongoDB.setupMongoDB(config.mongoDB);
+mongoDB.SetupMongoDB(config.mongodb);
 
 // Express app instance
 var app = express();
@@ -87,15 +87,15 @@ app.use(session({
 }));
 
 // Stormpath and Passport initialization
-var authStrategy = new StormpathStrategy({
+/*var authStrategy = new StormpathStrategy({
     apiKeyId:     config.auth.ApiKeyId,
     apiKeySecret: config.auth.ApiKeySecret,
     appHref:      config.auth.HREF
-});
+});*/
 
-passport.use(authStrategy);
+/*passport.use(authStrategy);
 passport.serializeUser(authStrategy.serializeUser);
-passport.deserializeUser(authStrategy.deserializeUser);
+passport.deserializeUser(authStrategy.deserializeUser);*/
 
 app.use(passport.initialize());
 app.use(passport.session());

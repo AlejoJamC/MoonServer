@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015-present, Alejandro Mantilla <@AlejoJamC>.
+ * Copyright (c) 2017-present, Alejandro Mantilla <@AlejoJamC>.
  * All rights reserved.
  *
  * This source code is licensed under the BSD-style license found in the
