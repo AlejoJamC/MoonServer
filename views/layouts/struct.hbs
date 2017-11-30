@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {{> landing/head}}
+</head>
+<body>
+<div class="nav-container">
+    <a id="top"></a>
+
+    <nav {{#if isHome}} class="absolute transparent" {{/if}}>
+        {{#unless isHome}}
+        <div class="nav-utility">
+            <div class="module left">
+                <i class="ti-location-arrow">&nbsp;</i>
+                <span class="sub">68 Cardamon Place, Melbourne Vic 3000</span>
+            </div>
+            <div class="module left">
+                <i class="ti-email">&nbsp;</i>
+                <span class="sub">hello@foundry.net</span>
+            </div>
+            <div class="module right">
+                <a class="btn btn-sm hidden-xs hidden-sm hidden-md" href="/">Try Builder</a>
+                <a class="btn btn-sm btn-filled" href="/pricing">Buy Now</a>
+            </div>
+        </div>
+        {{/unless}}
+        <div class="nav-bar">
+            <div class="module left">
+                <a href="/">
+                    <img class="logo logo-light" alt="Foundry" src="{{level}}img/logo-light.png" />
+                    <img class="logo logo-dark" alt="Foundry" src="{{level}}img/logo-dark.png" />
+                </a>
+            </div>
+            <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                <i class="ti-menu"></i>
+            </div>
+            <div class="module-group right">
+                {{> landing/navigation}}
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="main-container">
+    {{{body}}}
+    <!-- FOOTER -->
+    {{> landing/footer}}
+    <!-- END FOOTER -->
+</div>
+{{> landing/scripts}}
+</body>
+</html>

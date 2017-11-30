@@ -1,15 +1,8 @@
-# dynamite
+# MoonHR
 Approach of a document management system of an employee engagement department.
 
-
-
-
-
 ## Authentication
-
-### Stormpath API Key and Secret
-Download the apikey.properties and save it in config folder
-
+TODO
 
 ## Front-End Templates
 
