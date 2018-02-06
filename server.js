@@ -6,9 +6,14 @@
  * LICENSE file in the root directory of this source tree or translated in the assets folder.
  */
 
-//
-// Module dependencies
-//
+/**
+ * Environment variables
+ */
+require('dotenv').config();
+
+/**
+ * Module dependencies
+ */
 var express = require('express'),
     bodyParser = require('body-parser'),
     errorHandler = require('errorhandler'),
@@ -17,24 +22,24 @@ var express = require('express'),
     methodOverride = require('method-override'),
     moment = require('moment'),
     path = require('path'),
-    session = require('express-session'),
     passport = require('passport'),
-    StormpathStrategy = require('passport-stormpath'),
+    session = require('express-session'),
 
     logger = require('./utils/logger').Logger,
     morgan = require('morgan'),
 
     routes = require('./routes/routes'),
 
-    environment = 'devLocal',
-    config = require('./config/environment.json')[environment],
-    port = config.port;
+    environment = process.env.ENVIRONMENT,
+    port = process.env.APP_PORT,
+    version = process.env.APP_VERSION,
+
+    mongoDB = require('./utils/Mongodb');
 
 logger.info('Enviroment: ' + environment);
 
 // MongoDB connection
-var mongoDB = require('./utils/mongodb');
-mongoDB.SetupMongoDB(config.mongodb);
+mongoDB.SetupMongoDB(process.env.MONGODB_URI, process.env.MONGODB_NAME, process.env.APP_DB_SERVER);
 
 // Express app instance
 var app = express();
@@ -110,10 +115,10 @@ routes.setupRouter(app);
 
 // Error handler available environment
 var env = process.env.NODE_ENV || environment;
-if ('devLocal' === env) {
+if ('development' === env) {
     app.use(errorHandler());
 }
 
 app.listen(app.get('port'), function () {
-    logger.info('Dynamite is running on http://localhost:' + port + '/');
+    logger.info('Moon API server is running on http://localhost:' + port + version + '/');
 });
